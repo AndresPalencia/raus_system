@@ -1,3 +1,10 @@
+<?php
+include("database/db_conection.php");
+include("includes/estados.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +34,9 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+ 
+ 
+
 
 </head>
 
@@ -468,7 +478,7 @@
              <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Numero de Usuario" data-rule="required" data-msg="Ingrese su numero de usuario" />
+                <input type="text" name="user" class="form-control" id="user" placeholder="Numero de Usuario" data-rule="required" data-msg="Ingrese su numero de usuario" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
@@ -521,11 +531,11 @@
         <div class="form">
           <div id="sendmessage">Registro Exitoso</div>
           <div id="errormessage"></div>
-          <form action="index.php" method="post" role="form" class="contactForm">
+          <form action="index.php" id="registro" name="registro" method="post" role="form" class="contactForm">
             
             <div class="form-row">
               <div class="form-group col-md-4">
-                <input type="password" name="pass" class="form-control" id="name" placeholder="Password" data-rule="required" data-msg="Ingrese su password" />
+                <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" data-rule="required" data-msg="Ingrese su password" />
                 <div class="validation"></div>
               </div>
             </div>
@@ -548,31 +558,26 @@
 
             <div class="form-row">
               <div class="form-group col-md-4">
-                <select name="state" class="form-control" id="state" placeholder="Estado" data-rule="required" data-msg="Seleccione estado">
-                  <option disabled selected>Estado</option>
-                  <option value="capital">Distrito Capital</option>
-                  <option value="miranda">Miranda</option>
+                <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" data-rule="required" data-msg="Seleccione estado">
+                  <option value="0">Seleccionar Estado</option>
+                  <?php while($row = $resultado->fetch_assoc()) { ?>
+                    <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
+                  <?php } ?>
                 </select>
                 <div class="validation"></div>
               </div>
 
               <div class="form-group col-md-4">
-                  <select name="state" class="form-control" id="state" placeholder="Estado" data-rule="required" data-msg="Seleccione municipio">
-                  <option disabled selected>Municipio</option>
-                  <option value="lib">Libertador</option>
-                  <option value="cha">Chacao</option>
-                  <option value="suc">Sucre</option>
-                  <option value="bar">Baruta</option>
+                  <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" data-rule="required" data-msg="Seleccione municipio">
+                  <option value="0">Seleccionar Municipio</option>
                 </select>
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-4">
-              <select name="state" class="form-control" id="state" placeholder="Estado" required data-msg="Seleccione parroquia">
-                  <option disabled selected>Parroquia</option>
-                  <option value="distrito">El Valle</option>
-                  <option value="coche">Coche</option>
-                  <option value="rinconada">La Rinconada</option>
-                </select>  <div class="validation"></div>
+              <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" required data-msg="Seleccione parroquia">
+               <option value="0">Seleccionar Parroquia</option>
+                </select>  
+                <div class="validation"></div>
               </div>
             </div>
 
@@ -650,13 +655,39 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 
+   <script type="text/javascript">
+          $(document).ready(function(){
+        $("#cbx_estado").change(function () {
+ 
+          $('#cbx_parroquia').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
+          
+          $("#cbx_estado option:selected").each(function () {
+            id_estado = $(this).val();
+            $.post("includes/getMunicipios.php", { id_estado: id_estado }, function(data){
+              $("#cbx_municipio").html(data);
+            });            
+          });
+        })
+      });
+      
+      $(document).ready(function(){
+        $("#cbx_municipio").change(function () {
+          $("#cbx_municipio option:selected").each(function () {
+            id_municipio = $(this).val();
+            $.post("includes/getParroquia.php", { id_municipio: id_municipio }, function(data){
+              $("#cbx_parroquia").html(data);
+            });            
+          });
+        })
+      });
+  </script>
 </body>
 </html>
 
 
 <?php
 
-include("database/db_conection.php");//make connection here
+
 if(isset($_POST['register']))
 {
     $user_name=$_POST['name'];//here getting result from the post array after submitting the form.
