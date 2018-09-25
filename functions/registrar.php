@@ -1,5 +1,5 @@
 <?php
-include("database/db_conection.php");
+include("../database/db_conection.php");
 
 if(isset($_POST['registro']))
 {
@@ -31,7 +31,7 @@ exit();
    if($resultado)
     {
         if ($user_tipo="2") {
-           echo"<script>window.open('registrar_suscripcion_artista.php','_self')</script>";
+           echo"<script>window.open('../registrar_suscripcion_artista.php','_self')</script>";
         echo "<script>alert('Usuario registrado exitosamente!')</script>";
 
         $user_id_insert=mysqli_insert_id($dbcon);
@@ -41,7 +41,7 @@ exit();
         ('$user_name','$user_lastname','$resumen_artistico','$user_id_insert')";
         mysqli_query($dbcon,$insertArt) or die ($insertArt);
         }else{
-            echo"<script>window.open('registrar_suscripcion_ente.php','_self')</script>";
+            echo"<script>window.open('../registrar_suscripcion_ente.php','_self')</script>";
         }
     }else{
       echo "<script>alert('Error al guardar Usuario!')</script>";

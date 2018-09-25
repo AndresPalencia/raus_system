@@ -442,11 +442,11 @@ include("header.php");
              <div id="errormessage"></div>
             <form action="" method="post" role="form" >
               <div class="form-group">
-                <input type="text" name="user" class="form-control" id="user" placeholder="Numero de Usuario" data-rule="required" data-msg="Ingrese su numero de usuario" />
+                <input type="text" name="user" class="form-control" id="user" placeholder="Numero de Usuario" required data-msg="Ingrese su numero de usuario" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" data-rule="required" data-msg="Ingrese su Contraseña" />
+                <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required data-msg="Ingrese su Contraseña" />
                 <div class="validation"></div>
               </div>
                <div class="text-center">
@@ -476,7 +476,7 @@ include("header.php");
          
          
     <div id="errormessage"></div>
-          <form action="registrar.php" id="registro" name="registro" method="post" role="form" >
+          <form action="functions/registrar.php" id="registro" name="registro" method="post" role="form" >
             
 
              <div class="section-header">
@@ -487,8 +487,8 @@ include("header.php");
               <div class="container text-center">
                 <h3>Seleccione</h3>
                 <center><div class="form col-md-4">
-                  <select class="form-control" name="cbx_tipo_user" class="form-control" id="cbx_tipo_user" placeholder="Tipo de usuario" data-rule="required" data-msg="Seleccione tipo de usuario">
-                         <option active value="0">Seleccione</option>
+                  <select class="form-control" name="cbx_tipo_user" class="form-control" id="cbx_tipo_user" placeholder="Tipo de usuario" required data-msg="Seleccione tipo de usuario">
+                         <option disabled active>Seleccione</option>
                           <option value="1">Soy Ente Cultural</option>
                           <option value="2">Soy Artista Urbano</option>
                   </select>
@@ -501,22 +501,22 @@ include("header.php");
 
             <div class="form-row">
               <div class="form-group col-md-4">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="required" data-msg="Ingrese su nombre" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required data-msg="Ingrese su nombre" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-4">
-                <input type="lastname" class="form-control" name="lastname" id="lastname" placeholder="Apellido" data-rule="required" data-msg="Ingrese su apellido" />
+                <input type="lastname" class="form-control" name="lastname" id="lastname" placeholder="Apellido" required data-msg="Ingrese su apellido" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-4">
-                <input type="id" class="form-control" name="id_doc" id="id_doc" placeholder="C.I / RIF / Pasaporte" data-rule="required" data-msg="Ingrese su n&uacute;mero de documento" />
+                <input type="id" class="form-control" name="id_doc" id="id_doc" placeholder="C.I / RIF / Pasaporte" required data-msg="Ingrese su n&uacute;mero de documento" />
                 <div class="validation"></div>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" data-rule="required" data-msg="Ingrese su password" />
+                <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" required data-msg="Ingrese su password" />
                 <div class="validation"></div>
               </div>
                <div class="form-group col-md-6">
@@ -529,7 +529,7 @@ include("header.php");
 
             <div class="form-row">
               <div class="form-group col-md-4">
-                <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" data-rule="required" data-msg="Seleccione estado">
+                <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" required data-msg="Seleccione estado">
                   <option value="0">Seleccionar Estado</option>
                   <?php while($row = $resultado->fetch_assoc()) { ?>
                     <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
@@ -539,7 +539,7 @@ include("header.php");
               </div>
 
               <div class="form-group col-md-4">
-                  <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" data-rule="required" data-msg="Seleccione municipio">
+                  <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" required data-msg="Seleccione municipio">
                   <option value="0">Seleccionar Municipio</option>
                 </select>
                 <div class="validation"></div>
@@ -553,17 +553,17 @@ include("header.php");
             </div>
 
               <div class="form-group">
-              <textarea class="form-control" name="address" rows="5"  data-msg="" placeholder="Direcci&oacute;n"></textarea>
+              <textarea class="form-control" name="address" rows="5" placeholder="Direcci&oacute;n"></textarea>
               <div class="validation"></div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="phone" name="phone" class="form-control" id="phone" placeholder=" Telefono (0000) 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
+                <input type="phone" name="phone" class="form-control" id="phone" required placeholder=" Telefono (0000) 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Ingrese un correo valido" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" required data-msg="Ingrese un correo valido" />
                 <div class="validation"></div>
               </div>
             </div>

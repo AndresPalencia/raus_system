@@ -68,7 +68,7 @@ include("header.php");
           <br>
           <br>
          <div class="section-header">
-              <h3>Registro</h3>
+              <h3>Suscripci&oacute;n</h3>
               </div>
          
     <div id="errormessage"></div>
