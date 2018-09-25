@@ -42,48 +42,12 @@ include("includes/estados.php");
 
 <body>
 
-  <!--==========================
-    Header
-  ============================-->
-  <header id="header">
-    <div class="container-fluid">
-
-      <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">RAUS</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
-      </div>
-      
-      <!-- Menu de navegacion superior -->
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Inicio</a></li>
-          <li><a href="#about">Conocenos</a></li>
-          <li><a href="#portfolio">Noticias</a></li>
-          <li><a href="#team">Crew</a></li>
-         <!-- <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li> -->
-          <li><div class="social-links">
-              <a href="https://www.twitter.com/rausystem"  target="_blank"><i class=" fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/Rausystem-173642113498124/" target="_blank"><i class=" fa fa-facebook"></i></a>
-              <a href="https://www.instagram.com/rausystem.ccs/?hl=es-la" target="_blank"><i class=" fa fa-instagram"></i></a>
-              <a href="https://www.youtube.com/channel/UCav1I7tqBt5kHrSG8oV9bsw" target="_blank"><i class=" fa fa-youtube"></i></a>
-          </div></li>
-        </ul>
-      </nav>
-      <!-- Cierro menu de navegacion superior -->
-
-    </div>
-  </header><!-- #header -->
+<?php
+include("header.php");
+?>
 
   <div class="social-bar">
-    <a href="https://twitter.com/raus03894003" class=" icon icon-twitter"  target="_blank"></a>
+    <a href="https://twitter.com/rausystem?lang=es" class=" icon icon-twitter"  target="_blank"></a>
     <a href="https://www.facebook.com/Rausystem-173642113498124/" class="icon icon-facebook" target="_blank"></a>
     <a href="https://www.instagram.com/rausystem.ccs/?hl=es-la" class="icon icon-instagram" target="_blank"></a>
     <a href="https://www.youtube.com/channel/UCav1I7tqBt5kHrSG8oV9bsw" class="icon icon-youtube" target="_blank"></a>
@@ -476,7 +440,7 @@ include("includes/estados.php");
          <center>
            <div class="form form-login col-md-4 ">
              <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="" method="post" role="form" >
               <div class="form-group">
                 <input type="text" name="user" class="form-control" id="user" placeholder="Numero de Usuario" data-rule="required" data-msg="Ingrese su numero de usuario" />
                 <div class="validation"></div>
@@ -504,42 +468,36 @@ include("includes/estados.php");
     <!--==========================
       Contact Section
     ============================-->
-    <section id="contact" class="">
-      <div class="container">
 
-        <div class="section-header">
-          <h3>Registro</h3>
-          <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
-        </div>
-         <section id="call-to-action" class="wow fadeIn">
-      <div class="container text-center">
-        <h3>Seleccione</h3>
-        <center><div class="form col-md-4">
-          <select class="form-control">
-            <option active value="volvo"></option>
-            <option value="volvo">Soy Ente Cultural</option>
-            <option value="saab">Soy Artista Urbano</option>
-          </select>
 
-        </div></center>
-        <!--<a class="cta-btn" href="#">Call To Action</a>-->
-      </div>
-    </section><!-- #call-to-action -->
-<br>
-<br>
-
-        <div class="form">
-          <div id="sendmessage">Registro Exitoso</div>
-          <div id="errormessage"></div>
-          <form action="index.php" id="registro" name="registro" method="post" role="form" class="contactForm">
+      <div class="form">
+        <section id="contact" class="">
+        <div class="container">
+         
+         
+    <div id="errormessage"></div>
+          <form action="registrar.php" id="registro" name="registro" method="post" role="form" >
             
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" data-rule="required" data-msg="Ingrese su password" />
-                <div class="validation"></div>
-              </div>
-            </div>
 
+             <div class="section-header">
+            <h3>Registro</h3>
+            </div>
+            <br>
+            <section id="call-to-action" class="wow fadeIn">
+              <div class="container text-center">
+                <h3>Seleccione</h3>
+                <center><div class="form col-md-4">
+                  <select class="form-control" name="cbx_tipo_user" class="form-control" id="cbx_tipo_user" placeholder="Tipo de usuario" data-rule="required" data-msg="Seleccione tipo de usuario">
+                         <option active value="0">Seleccione</option>
+                          <option value="1">Soy Ente Cultural</option>
+                          <option value="2">Soy Artista Urbano</option>
+                  </select>
+                </div>
+                </center>
+              </div>
+            </section>
+            <br>
+            <br>
 
             <div class="form-row">
               <div class="form-group col-md-4">
@@ -551,10 +509,23 @@ include("includes/estados.php");
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-4">
-                <input type="id" class="form-control" name="id" id="id" placeholder="C.I / RIF / Pasaporte" data-rule="required" data-msg="Ingrese su n&uacute;mero de documento" />
+                <input type="id" class="form-control" name="id_doc" id="id_doc" placeholder="C.I / RIF / Pasaporte" data-rule="required" data-msg="Ingrese su n&uacute;mero de documento" />
                 <div class="validation"></div>
               </div>
             </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" data-rule="required" data-msg="Ingrese su password" />
+                <div class="validation"></div>
+              </div>
+               <div class="form-group col-md-6">
+                <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir contraseña" data-rule="required" data-msg="Ingrese su password" />
+                <div class="validation"></div>
+              </div>
+            </div>
+
+
 
             <div class="form-row">
               <div class="form-group col-md-4">
@@ -588,11 +559,11 @@ include("includes/estados.php");
 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="phone" name="name" class="form-control" id="name" placeholder=" Telefono (0000) 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
+                <input type="phone" name="phone" class="form-control" id="phone" placeholder=" Telefono (0000) 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="lastname" id="lastname" placeholder="Correo" data-rule="email" data-msg="Ingrese un correo valido" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Ingrese un correo valido" />
                 <div class="validation"></div>
               </div>
             </div>
@@ -609,7 +580,7 @@ include("includes/estados.php");
             <div> 
 
 
-            <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="register" >
+            <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
 
             </div>
           </form>
@@ -620,20 +591,9 @@ include("includes/estados.php");
 
   </main>
 
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
-
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright 2018 <strong>RAUS</strong>. Todos los derechos reservados 
-      </div>
-    </div>
-  </footer><!-- #footer -->
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <?php
+  include("footer.php");
+  ?>
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
@@ -650,7 +610,7 @@ include("includes/estados.php");
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
@@ -663,7 +623,7 @@ include("includes/estados.php");
           
           $("#cbx_estado option:selected").each(function () {
             id_estado = $(this).val();
-            $.post("includes/getMunicipios.php", { id_estado: id_estado }, function(data){
+            $.post("includes/municipios.php", { id_estado: id_estado }, function(data){
               $("#cbx_municipio").html(data);
             });            
           });
@@ -674,7 +634,7 @@ include("includes/estados.php");
         $("#cbx_municipio").change(function () {
           $("#cbx_municipio option:selected").each(function () {
             id_municipio = $(this).val();
-            $.post("includes/getParroquia.php", { id_municipio: id_municipio }, function(data){
+            $.post("includes/parroquias.php", { id_municipio: id_municipio }, function(data){
               $("#cbx_parroquia").html(data);
             });            
           });
@@ -685,50 +645,3 @@ include("includes/estados.php");
 </html>
 
 
-<?php
-
-
-if(isset($_POST['register']))
-{
-    $user_name=$_POST['name'];//here getting result from the post array after submitting the form.
-    $user_pass=$_POST['pass'];//same
-    $user_email=$_POST['email'];//same
-
-
-    if($user_name=='')
-    {
-        //javascript use for input checking
-        echo"<script>alert('Please enter the name')</script>";
-exit();//this use if first is not work then other will not show
-    }
-
-    if($user_pass=='')
-    {
-        echo"<script>alert('Please enter the password')</script>";
-exit();
-    }
-
-    if($user_email=='')
-    {
-        echo"<script>alert('Please enter the email')</script>";
-    exit();
-    }
-//here query check weather if user already registered so can't register again.
-    $check_email_query="select * from users WHERE user_email='$user_email'";
-    $run_query=mysqli_query($dbcon,$check_email_query);
-
-    if(mysqli_num_rows($run_query)>0)
-    {
-echo "<script>alert('Email $user_email is already exist in our database, Please try another one!')</script>";
-exit();
-    }
-//insert the user into the database.
-    $insert_user="insert into users (user_name,user_pass,user_email) VALUE ('$user_name','$user_pass','$user_email')";
-    if(mysqli_query($dbcon,$insert_user))
-    {
-        echo"<script>window.open('welcome.php','_self')</script>";
-    }
-
-}
-
-?>
