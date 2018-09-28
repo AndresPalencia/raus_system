@@ -548,10 +548,7 @@ include("header.php");
                      -->
 
                     <div>
-
-                        <input
-                                class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
-
+                        <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
                     </div>
                 </form>
 

@@ -37,7 +37,7 @@ if(isset($_POST['registro']))
         else if ($user_tipo=="1"){
              $insert_ente="insert into entes_culturales (usuarios_id_usuario) VALUES ('$user_id_insert')";
             mysqli_query($dbcon,$insert_ente) or die ($insert_ente);
-            echo"<script>window.open('../registrar_suscripcion_ente.php','_self')</script>";
+            echo"<script>window.open('../registrar_suscripcion_ente.php?user=$user_id_insert','_self')</script>";
         }
     }else{
         echo "<script>alert('Error al guardar Usuario!')</script>";
