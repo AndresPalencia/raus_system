@@ -68,11 +68,10 @@ include("header_suscripcion.php");
           <br>
           <br>
          <div class="section-header">
-              <h3>Registro</h3>
+              <h3>Suscripci&oacute;n</h3>
               </div>
-         
-    <div id="errormessage"></div>
-          <form action="registrar.php" id="registro" name="registro" method="post" role="form" >
+        
+          <form action="registrar.php" id="suscripcion" name="suscripcion" method="post" role="form" >
             
 
             
@@ -82,92 +81,30 @@ include("header_suscripcion.php");
 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" data-rule="required" data-msg="Ingrese su password" />
-                <div class="validation"></div>
+                <input type="text" name="nombre_ente" class="form-control" id="nombre_ente" placeholder="Nombre del ente" required />
               </div>
                <div class="form-group col-md-6">
-                <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir contraseña" data-rule="required" data-msg="Ingrese su password" />
-                <div class="validation"></div>
+                <input type="text" name="rif_ente" class="form-control" id="rif_ente" placeholder="RIF del ente" required />
               </div>
             </div>
 
-
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="required" data-msg="Ingrese su nombre" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-4">
-                <input type="lastname" class="form-control" name="lastname" id="lastname" placeholder="Apellido" data-rule="required" data-msg="Ingrese su apellido" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-4">
-                <input type="id" class="form-control" name="id_doc" id="id_doc" placeholder="C.I / RIF / Pasaporte" data-rule="required" data-msg="Ingrese su n&uacute;mero de documento" />
-                <div class="validation"></div>
-              </div>
+            <div class="form-group">
+              <textarea class="form-control" name="ubicacion" id="ubicacion" rows="5" placeholder="Ubicaci&oacute;n"></textarea>
             </div>
 
-            <div class="form-row">
-              <div class="form-group col-md-4">
-                <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" data-rule="required" data-msg="Seleccione estado">
-                  <option value="0">Seleccionar Estado</option>
-                  <?php while($row = $resultado->fetch_assoc()) { ?>
-                    <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
-                  <?php } ?>
-                </select>
-                <div class="validation"></div>
-              </div>
-
-              <div class="form-group col-md-4">
-                  <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" data-rule="required" data-msg="Seleccione municipio">
-                  <option value="0">Seleccionar Municipio</option>
-                </select>
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-4">
-              <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" required data-msg="Seleccione parroquia">
-               <option value="0">Seleccionar Parroquia</option>
-                </select>  
-                <div class="validation"></div>
-              </div>
+            <div class="form-group">
+              <textarea class="form-control" name="razon" id="razon" rows="5" placeholder="Raz&oacute;n Social"></textarea>
             </div>
-
-              <div class="form-group">
-              <textarea class="form-control" name="address" rows="5"  data-msg="" placeholder="Direcci&oacute;n"></textarea>
-              <div class="validation"></div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="phone" name="phone" class="form-control" id="phone" placeholder=" Telefono (0000) 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Ingrese un correo valido" />
-                <div class="validation"></div>
-              </div>
-            </div>
-            
-       <!--
-            <center>
-              <div class="form-group col-md-4">
-                Cargar Resumen Curricular 
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-             </div>
-            </center>
-        -->    
 
             <div> 
-
-
-            <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
-
+              <input class="text-center btn btn-lg btn-block" type="submit" value="Enviar" name="suscripcion" >
             </div>
+          
           </form>
         </div>
 
       </div>
-    </section><!-- #contact -->
+    </section>
 
   </main>
 

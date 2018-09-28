@@ -2,7 +2,7 @@
     Header
   ===========================-->
  
-  <form action="login.php" method="post">
+  <form action="login.php" method="POST">
   <header id="header">
     <div class="container-fluid">
 
@@ -41,7 +41,7 @@
     
              </li><li>
                     <div class="text-center">
-                    <input class="text-center btn btn-lg btn-block form-control btn-get-started-login scrollto" type="submit" value="Ingresar" name="login">
+                    <input class="text-center btn btn-lg btn-block form-control btn-get-started-login" type="submit" value="Ingresar" name="login">
                   </div>                   
           
           </li> 
