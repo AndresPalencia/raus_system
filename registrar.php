@@ -35,10 +35,10 @@ exit();
         echo "<script>alert('Usuario registrado exitosamente!')</script>";
 
         $user_id_insert=mysqli_insert_id($dbcon);
-        $resumen_artistico="";
+   
 
-        $insertArt="insert into artistas_urbanos (nombre,apellido,resumen_artistico,usuarios_id_usuario) VALUES
-        ('$user_name','$user_lastname','$resumen_artistico','$user_id_insert')";
+        $insertArt="insert into artistas_urbanos (usuarios_id_usuario) VALUES
+        ('$user_id_insert')";
         mysqli_query($dbcon,$insertArt) or die ($insertArt);
         }else{
             echo"<script>window.open('registrar_suscripcion_ente.php','_self')</script>";

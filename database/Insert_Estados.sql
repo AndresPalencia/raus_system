@@ -1,1 +1,0 @@
-INSERT INTO `estados` (`id_estado`, `estado`) VALUES (NULL, 'Miranda'), (NULL, 'Distrito Capital'), (NULL, 'Vargas');

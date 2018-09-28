@@ -1,23 +1,21 @@
 <?php
+session_start();
 include("database/db_conection.php");
 include("includes/estados.php");
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="utf-8">
   <title>RAUSystem</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons 
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
--->
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -34,9 +32,27 @@ include("includes/estados.php");
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
- 
- 
 
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  
+  <!-- Contact Form JavaScript File -->
+  
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
 
 </head>
 
@@ -47,16 +63,16 @@ include("header.php");
 ?>
 
   <div class="social-bar">
-    <a href="https://twitter.com/rausystem?lang=es" class=" icon icon-twitter"  target="_blank"></a>
+    <a href="https://www.twitter.com/rausystem?lang=es" class=" icon icon-twitter"  target="_blank"></a>
     <a href="https://www.facebook.com/Rausystem-173642113498124/" class="icon icon-facebook" target="_blank"></a>
     <a href="https://www.instagram.com/rausystem.ccs/?hl=es-la" class="icon icon-instagram" target="_blank"></a>
     <a href="https://www.youtube.com/channel/UCav1I7tqBt5kHrSG8oV9bsw" class="icon icon-youtube" target="_blank"></a>
   </div>
 
+    <!--==========================
+      Intro Section
+    ============================-->
 
-  <!--==========================
-    Intro Section
-  ============================-->
   <section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide " data-ride="carousel">
@@ -64,7 +80,6 @@ include("header.php");
         <ol class="carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
-
           <div class="carousel-item active">
             <div class="carousel-background"><img src="img/intro-carousel/1.jpg" alt=""></div>
           </div>
@@ -74,37 +89,39 @@ include("header.php");
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
-           
+            <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div> 
           </div>
         </div>
+        
         <div class="carousel-container">
           <div class="carousel-content col-md-6">
             <h2>BIENVENIDO</h2>
               <p></p>
                 <a href="#contact" class="btn-get-started scrollto">Registrate</a>
-                <a href="#login" class="btn-get-started scrollto">Ingresar</a>
-            </div>
+               <!-- <a href="#login" class="btn-get-started scrollto">Ingresa</a>-->
+          </div>
         </div>
+
       </div>
     </div>
-  </section><!-- #intro -->
+  </section><!-- #Intro -->
 
   <main id="main">
 
  
     <!--==========================
-      About Us Section
+      Conocenos Section
     ============================-->
-    <section id="about">
-      <div class="container">
+    
+  <section id="about">
+    <div class="container">
 
         <header class="section-header">
-          <h3>Conocenos</h3>
-          <p>Sistema de registro para artistas urbanos de la regi&oacute;n del Distrito Capital</p>
+          <h3>Conocenos</h3><br>
+          <p>Sistema de registro para artistas urbanos en toda la regi&oacute;n del Distrito Capital</p>
         </header>
 
-        <div class="row about-cols">
+      <div class="row about-cols">
 
           <div class="col-md-4 wow fadeInUp">
             <div class="about-col">
@@ -114,7 +131,7 @@ include("header.php");
               </div>
               <h2 class="title"><a href="#">Misi&oacute;n</a></h2>
               <p align="justify">
-                Establecer un espacio de inclusi&oacute;n social para todos los artistas de la cultura urbana a nivel regional. 
+                Establecer a traves de este instrumento tecnol&oacute;gico y de patrocinio un espacio que permita la inclusi&oacute;n social de todos los jovenes artistas y nuevos talentos de la cultura urbana a nivel regional 
               </p>
             </div>
           </div>
@@ -128,9 +145,9 @@ include("header.php");
               <h2 class="title"><a href="#">Objetivos</a></h2>
               <p>
                 <ul>
-                  <li>Postular</li>
-                  <li>Promover</li>
-                  <li>Producir</li>
+                  <li>Postular jovenes artistas y nuevos talentos de la cultura urbana a nivel regional</li>
+                  <li>Promover jovenes artistas y nuevos talentos de la cultura urbana a nivel regional</li>
+                  <li>Producir jovenes artistas y nuevos talentos de la cultura urbana a nivel regional</li>
                 </ul>
               </p>
             </div>
@@ -144,23 +161,23 @@ include("header.php");
               </div>
               <h2 class="title"><a href="#">Visi&oacute;n</a></h2>
               <p align="justify">
-                Consolidar una organizaci&oacute;n en apoyo a todos los artistas de la cultura urbana a nivel regional. 
+                Consolidar este instrumentos tecnol&oacute;gico y de patrocinio como una organizaci&oacute;n social en apoyo a todos los jovenes artistas y nuevos talentos de la cultura urbana a nivel regional 
               </p>
             </div>
           </div>
 
-        </div>
-
       </div>
-    </section><!-- #about -->
 
-   
+    </div>
+  </section><!-- #Conocenos -->
+<br><br><br>
 
     <!--==========================
-      Portfolio Section
+      Noticias Section
     ============================-->
-    <section id="portfolio"  class="section-bg" >
-      <div class="container">
+
+  <section id="portfolio"  class="section-bg" >
+    <div class="container">
 
         <header class="section-header">
           <h3 class="section-title">Noticias</h3>
@@ -171,10 +188,9 @@ include("header.php");
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">Todas</li>
               <li data-filter=".filter-app">Zona Norte</li>
-              <li data-filter=".filter-card">Zona Sur</li>
-              <li data-filter=".filter-web">Zona Centro</li>
+              <li data-filter=".filter-sis">Zona Sur</li>
               <li data-filter=".filter-web">Zona Este</li>
-              <li data-filter=".filter-web">Zona Oeste</li>
+              <li data-filter=".filter-mov">Zona Oeste</li>
             </ul>
           </div>
         </div>
@@ -188,7 +204,6 @@ include("header.php");
                 <a href="img/portfolio/news.png" data-lightbox="portfolio" data-title="Noticia 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 1</a></h4>
                 <p>Zona Norte</p>
@@ -203,10 +218,9 @@ include("header.php");
                 <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 1" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 1</a></h4>
-                <p>Zona Centro</p>
+                <p>Zona Este</p>
               </div>
             </div>
           </div>
@@ -218,7 +232,6 @@ include("header.php");
                 <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 2</a></h4>
                 <p>Zona Norte</p>
@@ -226,14 +239,13 @@ include("header.php");
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sis wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio/news.png" class="img-fluid" alt="">
                 <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 1" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 1</a></h4>
                 <p>Zona Sur</p>
@@ -248,10 +260,9 @@ include("header.php");
                 <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 2</a></h4>
-                <p>Zona Centro</p>
+                <p>Zona Este</p>
               </div>
             </div>
           </div>
@@ -263,7 +274,6 @@ include("header.php");
                 <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 3" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 3</a></h4>
                 <p>Zona Norte</p>
@@ -271,31 +281,29 @@ include("header.php");
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mov wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/news.png" class="img-fluid" alt="">
+                <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 1" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+              <div class="portfolio-info">
+                <h4><a href="#">Noticia 1</a></h4>
+                <p>Zona Oeste</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sis wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio/news.png" class="img-fluid" alt="">
                 <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 2" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 2</a></h4>
-                <p>Zona Sur</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/news.png" class="img-fluid" alt="">
-                <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Noticia 3</a></h4>
                 <p>Zona Sur</p>
               </div>
             </div>
@@ -308,45 +316,40 @@ include("header.php");
                 <a href="img/portfolio/news.png" class="link-preview" data-lightbox="portfolio" data-title="Noticia 3" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
-
               <div class="portfolio-info">
                 <h4><a href="#">Noticia 3</a></h4>
-                <p>Zona Centro</p>
+                <p>Zona Este</p>
               </div>
             </div>
           </div>
 
         </div>
-
-      </div>
-
-      <div class="container">
-    <div class="row">
-       <div class="col-md-6 twitter-content" >
-        <a class="twitter-timeline" data-lang="es" data-height="850" data-link-color="#00c5cd" href="https://twitter.com/rausystem">Tweets by Raus</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-      <div class="col-md-6">
-            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-          <div class="elfsight-app-23f253b5-3f3b-4ca0-8b32-00b1de46a02b"></div>
-      </div>
-          
-      
-    </div>
- </div>  
-    </section><!-- #portfolio -->
-
-   
-   
-    <!--==========================
-      Team Section
-    ============================-->
-    <section id="team">
-      <div class="container">
-        <div class="section-header wow fadeInUp">
-          <h3>Crew</h3>
-          <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
+        <br>
         </div>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 twitter-content" >
+          <a class="twitter-timeline" data-lang="es" data-height="850" data-link-color="#00c5cd" href="https://twitter.com/rausystem">Tweets by Raus</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-md-6">
+          <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+          <div class="elfsight-app-5e3f40e1-f90b-4ff1-ae0b-9d2bacd7e7e8"></div>
+        </div>          
+      </div>
+    
+    </div>  
+  </section><!-- #Noticias -->
+   
+    <!--==========================
+      Crew Section
+    ============================-->
+<br>
+  <section id="team">
+    <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h3>Crew</h3><br>
+        </div>
         <div class="row">
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
@@ -423,82 +426,45 @@ include("header.php");
 
         </div>
 
-      </div>
-    </section><!-- #team -->
-
- <!--==========================
-      Call To Action Section
-    ============================-->
- <br>
-<section id="login" class="section-bg wow fadeInUp">
-      <div class="container">
-<br><br>
-        <div class="section-header">
-          <h3>Ingresar</h3><br>
-          <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>-->
-         </div>
-         <center>
-           <div class="form form-login col-md-4 ">
-             <div id="errormessage"></div>
-            <form action="" method="post" role="form" >
-              <div class="form-group">
-                <input type="text" name="user" class="form-control" id="user" placeholder="Numero de Usuario" required data-msg="Ingrese su numero de usuario" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required data-msg="Ingrese su Contraseña" />
-                <div class="validation"></div>
-              </div>
-               <div class="text-center">
-                  <input class="text-center btn btn-lg btn-block" type="submit" value="Ingresar" name="login" >
-                </div>
-            
-            </form>
-
-          </div>
-
-
-         </center> 
-
-        
-      </div><br><br>
-    </section><!-- #call-to-action -->
+    </div>
+  </section><!-- #Crew -->
+<br>
+  
 
 
     <!--==========================
-      Contact Section
+      Registro Inscripcion Section
     ============================-->
 
-
-      <div class="form">
-        <section id="contact" class="">
-        <div class="container">
+<br>
+  <div class="form">
+  <section id="contact" class="">
+  <div class="container">         
          
-         
-    <div id="errormessage"></div>
-          <form action="functions/registrar.php" id="registro" name="registro" method="post" role="form" >
-            
+      <div id="errormessage"></div>
+        <form action="functions/registrar.php" id="registro" name="registro" method="post" >            
 
-             <div class="section-header">
+            <div class="section-header">
             <h3>Registro</h3>
             </div>
+
             <br>
             <section id="call-to-action" class="wow fadeIn">
-              <div class="container text-center">
-                <h3>Seleccione</h3>
+                <div class="container text-center">
+                  <h3>Seleccione</h3>
                 <center><div class="form col-md-4">
                   <select class="form-control" name="cbx_tipo_user" class="form-control" id="cbx_tipo_user" placeholder="Tipo de usuario" required data-msg="Seleccione tipo de usuario">
-                         <option disabled active>Seleccione</option>
-                          <option value="1">Soy Ente Cultural</option>
-                          <option value="2">Soy Artista Urbano</option>
+                        <option value="0">Seleccionar Opci&oacute;n</option>
+                        <option value="1">Soy Ente Cultural</option>
+                        <option value="2">Soy Artista Urbano</option>
                   </select>
                 </div>
                 </center>
               </div>
             </section>
             <br>
+            
             <br>
-
             <div class="form-row">
               <div class="form-group col-md-4">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required data-msg="Ingrese su nombre" />
@@ -519,40 +485,40 @@ include("header.php");
                 <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" required data-msg="Ingrese su password" />
                 <div class="validation"></div>
               </div>
-               <div class="form-group col-md-6">
+              <div class="form-group col-md-6">
                 <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir contraseña" data-rule="required" data-msg="Ingrese su password" />
                 <div class="validation"></div>
               </div>
             </div>
 
-
-
             <div class="form-row">
               <div class="form-group col-md-4">
                 <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" required data-msg="Seleccione estado">
                   <option value="0">Seleccionar Estado</option>
-                  <?php while($row = $resultado->fetch_assoc()) { ?>
-                    <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
-                  <?php } ?>
+                    <?php while($row = $resultado->fetch_assoc()) { ?>
+                      <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
+                    <?php } ?>
                 </select>
                 <div class="validation"></div>
-              </div>
+            </div>
 
-              <div class="form-group col-md-4">
-                  <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" required data-msg="Seleccione municipio">
+            <div class="form-group col-md-4">
+                <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" required data-msg="Seleccione municipio">
                   <option value="0">Seleccionar Municipio</option>
                 </select>
                 <div class="validation"></div>
-              </div>
-              <div class="form-group col-md-4">
-              <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" required data-msg="Seleccione parroquia">
-               <option value="0">Seleccionar Parroquia</option>
+            </div>
+            
+            <div class="form-group col-md-4">
+                <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" required data-msg="Seleccione parroquia">
+                  <option value="0">Seleccionar Parroquia</option>
                 </select>  
                 <div class="validation"></div>
-              </div>
+            </div>
+            
             </div>
 
-              <div class="form-group">
+            <div class="form-group">
               <textarea class="form-control" name="address" rows="5" placeholder="Direcci&oacute;n"></textarea>
               <div class="validation"></div>
             </div>
@@ -562,7 +528,8 @@ include("header.php");
                 <input type="phone" name="phone" class="form-control" id="phone" required placeholder=" Telefono (0000) 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
                 <div class="validation"></div>
               </div>
-              <div class="form-group col-md-6">
+            
+            <div class="form-group col-md-6">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" required data-msg="Ingrese un correo valido" />
                 <div class="validation"></div>
               </div>
@@ -579,15 +546,16 @@ include("header.php");
 
             <div> 
 
-
-            <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
+            <input onclick="Validar();" class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
 
             </div>
           </form>
+          <div id="resultado"></div>
+
         </div>
 
-      </div>
-    </section><!-- #contact -->
+    </div>
+  </section><!-- #Registro Inscripcion -->
 
   </main>
 
@@ -595,33 +563,13 @@ include("header.php");
   include("footer.php");
   ?>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
 
-   <script type="text/javascript">
-          $(document).ready(function(){
-        $("#cbx_estado").change(function () {
- 
-          $('#cbx_parroquia').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
-          
-          $("#cbx_estado option:selected").each(function () {
+  <script type="text/javascript">
+        $(document).ready(function(){
+          $("#cbx_estado").change(function () { 
+            $('#cbx_parroquia').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');          
+        $("#cbx_estado option:selected").each(function () {
             id_estado = $(this).val();
             $.post("includes/municipios.php", { id_estado: id_estado }, function(data){
               $("#cbx_municipio").html(data);
@@ -641,6 +589,20 @@ include("header.php");
         })
       });
   </script>
+  <script>
+  function Validar()
+        {
+            $.ajax({
+                url: "php/sql/validar.php",
+                type: "POST",
+                data: "user="+user+"&pass="+pass,
+                success: function(resp){
+                $('#resultado').html(resp)
+                }       
+            });
+        }
+        </script>
+
 </body>
 </html>
 

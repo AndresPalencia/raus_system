@@ -1,23 +1,21 @@
 <?php
+
 include("database/db_conection.php");
 include("includes/estados.php");
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8">
   <title>RAUSystem</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons 
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
--->
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -34,8 +32,6 @@ include("includes/estados.php");
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
- 
- 
 
 
 </head>
@@ -43,39 +39,34 @@ include("includes/estados.php");
 <body>
 
 <?php
-include("header.php");
+include("header_suscripcion.php");
 ?>
 
   <div class="social-bar">
-    <a href="https://twitter.com/rausystem?lang=es" class=" icon icon-twitter"  target="_blank"></a>
+    <a href="https://www.twitter.com/rausystem?lang=es" class=" icon icon-twitter"  target="_blank"></a>
     <a href="https://www.facebook.com/Rausystem-173642113498124/" class="icon icon-facebook" target="_blank"></a>
     <a href="https://www.instagram.com/rausystem.ccs/?hl=es-la" class="icon icon-instagram" target="_blank"></a>
     <a href="https://www.youtube.com/channel/UCav1I7tqBt5kHrSG8oV9bsw" class="icon icon-youtube" target="_blank"></a>
   </div>
 
-
-
     <!--==========================
       Contact Section
     ============================-->
 
- <section id="call-to-action" class="wow fadeIn">
+  <section id="call-to-action" class="wow fadeIn">
              
   </section>
       <div class="form">
         <section id="contact" class="">
-        <div class="container">
+      <div class="container">
           <br>
           <br>
-         <div class="section-header">
-              <h3>Suscripci&oacute;n</h3>
-              </div>
+      <div class="section-header">
+          <h3>Suscripci&oacute;n</h3>
+    </div>
          
     <div id="errormessage"></div>
           <form action="registrar.php" id="registro" name="registro" method="post" role="form" >
-            
-
-            
            
             <br>
             <br>
@@ -86,8 +77,6 @@ include("header.php");
                 <div class="validation"></div>
               </div>
             </div>
-
-
             <div class="form-row">
               <div class="form-group col-md-4">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="required" data-msg="Ingrese su nombre" />
@@ -102,7 +91,7 @@ include("header.php");
                 <div class="validation"></div>
               </div>
             </div>
-
+            
             <div class="form-row">
               <div class="form-group col-md-4">
                 <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" data-rule="required" data-msg="Seleccione estado">
@@ -115,20 +104,21 @@ include("header.php");
               </div>
 
               <div class="form-group col-md-4">
-                  <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" data-rule="required" data-msg="Seleccione municipio">
+                <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" data-rule="required" data-msg="Seleccione municipio">
                   <option value="0">Seleccionar Municipio</option>
                 </select>
                 <div class="validation"></div>
               </div>
+              
               <div class="form-group col-md-4">
-              <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" required data-msg="Seleccione parroquia">
-               <option value="0">Seleccionar Parroquia</option>
+                <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" required data-msg="Seleccione parroquia">
+                  <option value="0">Seleccionar Parroquia</option>
                 </select>  
                 <div class="validation"></div>
               </div>
             </div>
 
-              <div class="form-group">
+            <div class="form-group">
               <textarea class="form-control" name="address" rows="5"  data-msg="" placeholder="Direcci&oacute;n"></textarea>
               <div class="validation"></div>
             </div>
@@ -141,8 +131,8 @@ include("header.php");
               <div class="form-group col-md-6">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" data-msg="Ingrese un correo valido" />
                 <div class="validation"></div>
-              </div>
             </div>
+    </div>
             
        <!--
             <center>
@@ -154,16 +144,13 @@ include("header.php");
         -->    
 
             <div> 
-
-
             <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
 
             </div>
           </form>
         </div>
-
       </div>
-    </section><!-- #contact -->
+</section><!-- #contact -->
 
   </main>
 
@@ -172,9 +159,9 @@ include("header.php");
   ?>
 
   <!-- JavaScript Libraries -->
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/superfish/hoverIntent.js"></script>
   <script src="lib/superfish/superfish.min.js"></script>
@@ -186,7 +173,6 @@ include("header.php");
   <script src="lib/lightbox/js/lightbox.min.js"></script>
   <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
   <!-- Contact Form JavaScript File -->
-  
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
