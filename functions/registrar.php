@@ -29,8 +29,8 @@ if(isset($_POST['registro']))
     if($resultado){
         if ($user_tipo=="2"){
     $resumen_artistico="";
-            $insertArt="insert into artistas_urbanos (nombre,apellido,resumen_artistico,usuarios_id_usuario) VALUES
-            ('$user_name','$user_lastname','$resumen_artistico','$user_id_insert')";
+            $insertArt="insert into artistas_urbanos (resumen_artistico,usuarios_id_usuario) VALUES
+            ('$resumen_artistico','$user_id_insert')";
             mysqli_query($dbcon,$insertArt) or die ($insertArt);
             echo"<script>window.open('../registrar_suscripcion_artista.php','_self')</script>";
         } 

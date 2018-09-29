@@ -1,8 +1,28 @@
 <?php
 include("database/db_conection.php");
 include("includes/estados.php");
-$user = $_GET['user'];
+session_start();
+$id_user=$_SESSION['id'];
 
+$user = $_GET['user'];
+$select_ente="SELECT * FROM entes_culturales where usuarios_id_usuario='$id_user'";
+$run_select=mysqli_query($dbcon,$select_ente) or die($select_ente);
+
+while($row_ente=mysqli_fetch_array($run_select)){
+    $id_ente_select=$row_ente['id_ente_cultural'];
+}
+while($row_artista=mysqli_fetch_array($run_select)){
+    $id_artista=$row_artista['id_artistas'];
+}
+
+
+
+
+$table_redes="SELECT entes_redes_sociales.identes_redes_sociales, entes_redes_sociales.url_red_social, 
+redes_sociales.red_social FROM entes_redes_sociales INNER JOIN redes_sociales 
+ON entes_redes_sociales.redes_sociales_id_redes_sociales= redes_sociales.id_redes_sociales
+ ";
+$run_query_red=mysqli_query($dbcon,$table_redes) or die($table_redes);
 ?>
 
 
@@ -98,7 +118,46 @@ include("header_suscripcion.php");
                 <div class="form-group">
                     <textarea class="form-control" name="razon" id="razon" rows="5" placeholder="Raz&oacute;n Social"></textarea>
                 </div>
+                <div >
+                    <div >
+                        <h4><strong>Redes Sociales</strong></h4>
+                    </div>
 
+                </div>
+                <div>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Red Social</th>
+                            <th>URL</th>
+
+                            <th class="text-right white">
+                                <a  class="btn btn-info white"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        if(mysqli_num_rows($run_query_red)>0)
+                        {
+                            while($rowRed = $run_query_red->fetch_assoc()) {
+                                ?>
+                                <tr>
+                                    <td><?php echo utf8_encode($rowRed["red_social"]) ?></td>
+                                    <td><a href='<?php echo utf8_encode($rowRed["url_red_social"]) ?>'</a><?php echo utf8_encode($rowRed["url_red_social"]) ?></td>
+
+                                    <td class="text-right">
+                                        <a  class="btn btn-danger button-red"><i class="fa fa-trash white" aria-hidden="true"></i></a>
+                                        <a  class="btn btn-warning"><i class="fa fa-edit white" aria-hidden="true"></i></a>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                        }
+                        ?>
+
+                    </table>
+                </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <input type="checkbox" name="contrato" value="1" required> Aceptar

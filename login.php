@@ -13,11 +13,15 @@ if(isset($_POST['login']))
 
     if(mysqli_num_rows($run))
     {
+        session_start();
+
         $_SESSION['user']=$user_user;//here session is used and value of $user_email store in $_SESSION.
 
         while($row=mysqli_fetch_array($run))  {
             $tipo_usuario = $row['tipo_usuario'];
             $id =$row['id_usuario'];
+            $_SESSION['id']=$id;
+
             if ($tipo_usuario=="1") {
                 $ente="select * from entes_culturales WHERE usuarios_id_usuario='$id' ";
                 $run_ente=mysqli_query($dbcon,$ente);
@@ -34,6 +38,7 @@ if(isset($_POST['login']))
             if ($tipo_usuario=="2") {
                 $artista="select * from artistas_urbanos WHERE usuarios_id_usuario='$id' ";
                 $run_artista=mysqli_query($dbcon,$artista);
+
                 while($row_artista=mysqli_fetch_array($run_artista)){
                     $resumen=$row_artista['resumen_artistico'];
                     if ($nombre_artista=="") {

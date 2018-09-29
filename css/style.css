@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #00c5cd;
 }
 
-.logout: hover{
+.logout:hover{
   color: white;
 }
 
@@ -843,15 +843,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 1px;
   text-align: left;
   transition: .9s;
-}
-
-/* Facts Section
---------------------------------*/
-#facts {
-  background: url("../img/facts-bg.jpg") center top no-repeat fixed;
-  background-size: cover;
-  padding: 60px 0 0 0;
-  position: relative;
 }
 
 #facts::before {
@@ -1557,4 +1548,7 @@ height: 500px;
   background-color: white;
   box-shadow: 1px 1px 1px 1px grey;
   padding: 30px
-} 
+}
+.white{
+  color: white;
+}
