@@ -4,7 +4,7 @@ include("includes/estados.php");
 session_start();
 $id_user=$_SESSION['id'];
 
-$user = $_GET['user'];
+
 $select_ente="SELECT * FROM entes_culturales where usuarios_id_usuario='$id_user'";
 $run_select=mysqli_query($dbcon,$select_ente) or die($select_ente);
 
@@ -16,13 +16,13 @@ while($row_artista=mysqli_fetch_array($run_select)){
 }
 
 
-
-
 $table_redes="SELECT entes_redes_sociales.identes_redes_sociales, entes_redes_sociales.url_red_social, 
 redes_sociales.red_social FROM entes_redes_sociales INNER JOIN redes_sociales 
-ON entes_redes_sociales.redes_sociales_id_redes_sociales= redes_sociales.id_redes_sociales
- ";
+ON entes_redes_sociales.redes_sociales_id_redes_sociales=redes_sociales.id_redes_sociales 
+WHERE entes_redes_sociales.entes_culturales_id_ente_cultural='$id_ente_select'";
 $run_query_red=mysqli_query($dbcon,$table_redes) or die($table_redes);
+
+
 ?>
 
 
@@ -56,9 +56,6 @@ $run_query_red=mysqli_query($dbcon,$table_redes) or die($table_redes);
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
 
-
-
-
 </head>
 
 <body>
@@ -77,7 +74,7 @@ include("header_suscripcion.php");
 
 
 <!--==========================
-  Contact Section
+  Suscripcion Section
 ============================-->
 
 <section id="call-to-action" class="wow fadeIn">
@@ -93,8 +90,6 @@ include("header_suscripcion.php");
             </div>
 
             <form action="functions/suscribir_ente.php" id="suscripcion" name="suscripcion" method="post" role="form" >
-
-
 
 
                 <br>

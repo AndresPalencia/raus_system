@@ -1,4 +1,4 @@
-<div class="modal fade" id="estudios_realizados" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="titulos_obtenidos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,9 +9,9 @@
             </div>
             <div class="modal-body">
                 <p align="justify">
-                <form action="functions/agregar_estudio_realizado.php" id="form_estudios" name="form_estudios" method="post">
+                <form action="functions/agregar_titulo_obtenido.php" id="form_titulos" name="form_titulos" method="post">
                     <div class="form-row">
-                        <input type="text" name="estudio" class="form-control" id="estudio" placeholder="Estudio" required/>
+                        <input type="text" name="titulo" class="form-control" id="titulo" placeholder="Titulo" required/>
                     </div>
                     <br>
                     <div class="form-row">
@@ -19,15 +19,11 @@
                     </div>
                     <br>
                     <div class="form-row">
-                        <input type="text" name="duracion" class="form-control" id="duracion" placeholder="Duraci&oacute;n" required />
-                    </div>
-                    <br>
-                    <div class="form-row">
                         <input type="text" name="anio" class="form-control" id="anio" placeholder="Año" required />
                     </div>
 
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" name="form_estudios">Aceptar</button>
+                        <button type="submit" class="btn btn-secondary" name="form_titulos  ">Aceptar</button>
                     </div>
                 </form>
                 </p>
@@ -36,4 +32,3 @@
         </div>
     </div>
 </div>
-

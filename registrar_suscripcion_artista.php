@@ -1,8 +1,9 @@
 <?php
+include("database/db_conection.php");
+include("includes/estados.php");
 session_start();
 $id_user=$_SESSION['id'];
 
-include("database/db_conection.php");
 $select_artista="SELECT *FROM artistas_urbanos where usuarios_id_usuario='$id_user'";
 $run_select=mysqli_query($dbcon,$select_artista);
 
@@ -23,14 +24,14 @@ $run_query_agru=mysqli_query($dbcon,$table_agru);
 $table_esp="SELECT artistas_esp_artisticas.artistas_urbanos_id_artistas, 
 esp_artisticas.nombre_especialidad_artistica FROM artistas_esp_artisticas 
 INNER JOIN esp_artisticas ON artistas_esp_artisticas.artistas_urbanos_id_artistas 
-= esp_artisticas.id_esp_artistica 
+=esp_artisticas.id_esp_artistica 
 WHERE artistas_esp_artisticas.artistas_urbanos_id_artistas='$id_artista'";
 $run_query_esp=mysqli_query($dbcon,$table_esp);
 
 $table_redes="SELECT artistas_redes_sociales.id_artistas_redes_sociales, 
 artistas_redes_sociales.url_red_social, redes_sociales.red_social FROM artistas_redes_sociales 
-INNER JOIN redes_sociales ON artistas_redes_sociales.redes_sociales_id_redes_sociales= 
-redes_sociales.id_redes_sociales 
+INNER JOIN redes_sociales ON artistas_redes_sociales.redes_sociales_id_redes_sociales
+=redes_sociales.id_redes_sociales 
 WHERE artistas_redes_sociales.artistas_urbanos_id_artistas='$id_artista'";
 $run_query_red=mysqli_query($dbcon,$table_redes);
 
@@ -185,7 +186,8 @@ include("header_suscripcion.php");
                             <th>Institución</th>
                             <th>Año</th>
                             <th class="text-right white">
-                                <a  class="btn btn-info white"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+
+                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#titulos_obtenidos"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -193,7 +195,7 @@ include("header_suscripcion.php");
                         <?php
                         if(mysqli_num_rows($run_query_titulos)>0)
                         {
-                            while($rowTitulos = $run_query_titulos->fetch_assoc()) {
+                            while($row = $run_query_titulos->fetch_assoc()) {
                                 ?>
                                 <tr>
                                     <td><?php echo utf8_encode($rowTitulos["titulo"]) ?></td>
@@ -214,7 +216,7 @@ include("header_suscripcion.php");
                 <br>
                 <div >
                     <div >
-                        <h4><strong>Participaci&oacute;n en Grupos</strong></h4>
+                        <h4><strong>Participaci&oacute;n en Agrupaciones</strong></h4>
                     </div>
 
                 </div>
@@ -223,11 +225,11 @@ include("header_suscripcion.php");
                         <thead>
                         <tr>
                             <th>Grupo</th>
-                            <th>duracion</th>
+                            <th>Duracion</th>
                             <th>Año</th>
                             <th>Lugar</th>
                             <th class="text-right white">
-                                <a  class="btn btn-info white"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#agrupaciones"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -235,7 +237,7 @@ include("header_suscripcion.php");
                         <?php
                         if(mysqli_num_rows($run_query_agru)>0)
                         {
-                            while($rowAgru = $run_query_agru->fetch_assoc()) {
+                            while($row = $run_query_agru->fetch_assoc()) {
                                 ?>
                                 <tr>
                                     <td><?php echo utf8_encode($rowAgru["grupo"]) ?></td>
