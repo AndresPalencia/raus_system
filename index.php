@@ -457,7 +457,7 @@ include("header.php");
                             <h3>Seleccione</h3>
                             <center><div class="form col-md-4">
                                     <select class="form-control" name="cbx_tipo_user" class="form-control" id="cbx_tipo_user" placeholder="Tipo de usuario" required data-msg="Seleccione tipo de usuario">
-                                        <option value="0">Seleccionar Opci&oacute;n</option>
+                                        <option value="">Seleccionar Opci&oacute;n</option>
                                         <option value="1">Soy Ente Cultural</option>
                                         <option value="2">Soy Artista Urbano</option>
                                     </select>

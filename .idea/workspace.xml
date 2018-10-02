@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a74e9341-ecc0-41b5-901a-b15bbdaf3c57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/especialidades_artisticas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/agregar_especialidades_artisticas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/agregar_redes_sociales.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/suscribir_artista.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redes_sociales.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudios_realizados.php" beforeDir="false" afterPath="$PROJECT_DIR$/estudios_realizados.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agrupaciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/agrupaciones.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/agregar_agrupacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/agregar_agrupacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/agregar_titulo_obtenido.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/agregar_titulo_obtenido.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/registrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/registrar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registrar.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/registrar_suscripcion_artista.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrar_suscripcion_artista.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registrar_suscripcion_ente.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrar_suscripcion_ente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/titulos_obtenidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/titulos_obtenidos.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +58,21 @@
         <item name="raus_db@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="raus_db: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="artistas_agrupaciones: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="artistas_urbanos: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="raus_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="raus_db: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="entes_culturales: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="raus_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="raus_db: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="redes_sociales: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -62,13 +89,14 @@
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.62" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.68" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="21" />
-          <entry key="php" value="3338" />
+          <entry key="php" value="4623" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
@@ -76,16 +104,17 @@
         <counts>
           <entry key="CSS" value="21" />
           <entry key="HTML" value="12" />
-          <entry key="PHP" value="3281" />
+          <entry key="PHP" value="4562" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="SQL" value="45" />
+          <entry key="SQL" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="artistas_urbanos" value="1" />
           <entry key="css" value="2" />
-          <entry key="php" value="25" />
+          <entry key="esp_artisticas" value="1" />
+          <entry key="php" value="46" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="2" />
           <entry key="usuarios" value="1" />
@@ -94,8 +123,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="Database Element" value="2" />
-          <entry key="PHP" value="25" />
+          <entry key="Database Element" value="3" />
+          <entry key="PHP" value="46" />
           <entry key="RNG Compact" value="1" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -104,11 +133,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9700">
-              <caret line="485" column="42" selection-start-line="485" selection-start-column="42" selection-end-line="485" selection-end-column="42" />
+            <state relative-caret-position="474">
+              <caret line="459" column="55" lean-forward="true" selection-start-line="459" selection-start-column="55" selection-end-line="459" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -116,8 +145,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registrar_suscripcion_ente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3140">
-              <caret line="157" column="90" selection-start-line="157" selection-start-column="90" selection-end-line="157" selection-end-column="90" />
+            <state relative-caret-position="100">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -125,40 +172,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registrar_suscripcion_artista.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4740">
-              <caret line="237" column="58" selection-start-line="237" selection-start-column="58" selection-end-line="237" selection-end-column="58" />
+            <state relative-caret-position="200">
+              <caret line="346" column="119" selection-start-line="346" selection-start-column="119" selection-end-line="346" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/estudios_realizados.php">
+        <entry file="file://$PROJECT_DIR$/redes_sociales.php">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" />
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions/agregar_redes_sociales.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/titulos_obtenidos.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agrupaciones.php">
+        <entry file="file://$PROJECT_DIR$/functions/suscribir_artista.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="62" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="62" />
+            <state relative-caret-position="140">
+              <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/agregar_estudio_realizado.php">
+        <entry file="file://$PROJECT_DIR$/functions/suscribir_ente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+            <state relative-caret-position="180">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -166,17 +217,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/registrar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="40" selection-start-line="39" selection-end-line="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/registrar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="5" selection-start-line="20" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="420">
+              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -187,6 +229,8 @@
     <findStrings>
       <find>main</find>
       <find>exampleModal</find>
+      <find>titu</find>
+      <find>registrar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,18 +239,28 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/functions/suscribir_ente.php" />
-        <option value="$PROJECT_DIR$/functions/registrar.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/functions/agregar_estudio_realizado.php" />
         <option value="$PROJECT_DIR$/contrato.php" />
         <option value="$PROJECT_DIR$/estudios_realizados.php" />
-        <option value="$PROJECT_DIR$/registrar_suscripcion_ente.php" />
-        <option value="$PROJECT_DIR$/agrupaciones.php" />
-        <option value="$PROJECT_DIR$/registrar_suscripcion_artista.php" />
         <option value="$PROJECT_DIR$/titulos_obtenidos.php" />
+        <option value="$PROJECT_DIR$/functions/agregar_titulo_obtenido.php" />
+        <option value="$PROJECT_DIR$/agrupaciones.php" />
+        <option value="$PROJECT_DIR$/functions/agregar_agrupacion.php" />
+        <option value="$PROJECT_DIR$/agregar_especialidades_artisticas.php" />
+        <option value="$PROJECT_DIR$/functions/agregar_especialidades_artisticas.php" />
+        <option value="$PROJECT_DIR$/especialidades_artisticas.php" />
+        <option value="$PROJECT_DIR$/redes_sociales.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/logout.php" />
+        <option value="$PROJECT_DIR$/registrar.php" />
+        <option value="$PROJECT_DIR$/functions/registrar.php" />
+        <option value="$PROJECT_DIR$/registrar_suscripcion_ente.php" />
+        <option value="$PROJECT_DIR$/registrar_suscripcion_artista.php" />
+        <option value="$PROJECT_DIR$/functions/suscribir_artista.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/functions/agregar_redes_sociales.php" />
       </list>
     </option>
   </component>
@@ -254,6 +308,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\RAUS\functions" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -283,11 +342,12 @@
       <workItem from="1538236440070" duration="11563000" />
       <workItem from="1538319526117" duration="14806000" />
       <workItem from="1538367838769" duration="208000" />
+      <workItem from="1538493831008" duration="20859000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56818000" />
+    <option name="totallyTimeSpent" value="77677000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,12 +360,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798116" weight="0.1433162" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798116" visible="true" weight="0.1433162" />
       <window_info id="Structure" order="1" sideWeight="0.50201887" side_tool="true" weight="0.21786633" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -323,11 +384,11 @@
       <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.22172236" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798116" visible="true" weight="0.1433162" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49798116" visible="true" weight="0.1433162" />
       <window_info id="Structure" order="1" sideWeight="0.50201887" side_tool="true" weight="0.21786633" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -342,7 +403,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.22172236" />
+      <window_info anchor="right" id="Database" order="3" weight="0.22172236" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,20 +436,10 @@
     <entry file="file://$PROJECT_DIR$/database/db_conection.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/tables.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="216" column="16" selection-start-line="216" selection-start-column="16" selection-end-line="216" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/suscribir_ente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -416,72 +467,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
+    <entry file="file://$PROJECT_DIR$/agrupaciones.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="35" column="17" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="35" selection-end-column="17" />
+        <state relative-caret-position="580">
+          <caret line="29" column="87" selection-start-line="29" selection-start-column="87" selection-end-line="29" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/agregar_agrupacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/agregar_titulo_obtenido.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registrar_suscripcion_ente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3140">
-          <caret line="157" column="90" selection-start-line="157" selection-start-column="90" selection-end-line="157" selection-end-column="90" />
+        <state relative-caret-position="175">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registrar_suscripcion_artista.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4740">
-          <caret line="237" column="58" selection-start-line="237" selection-start-column="58" selection-end-line="237" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/estudios_realizados.php">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="das://e97aacc8-3d96-4048-80a6-81a3d697666b/schema/raus_db/table/esp_artisticas">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
-          <caret lean-forward="true" />
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/titulos_obtenidos.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agrupaciones.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/registrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="40" selection-start-line="39" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="5" selection-start-line="20" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="660">
+          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/agregar_estudio_realizado.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        <state relative-caret-position="20">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="29" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/especialidades_artisticas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="152" selection-start-line="20" selection-start-column="152" selection-end-line="20" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/estudios_realizados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/agregar_especialidades_artisticas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="25" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9700">
-          <caret line="485" column="42" selection-start-line="485" selection-start-column="42" selection-end-line="485" selection-end-column="42" />
+        <state relative-caret-position="474">
+          <caret line="459" column="55" lean-forward="true" selection-start-line="459" selection-start-column="55" selection-end-line="459" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrar_suscripcion_ente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrar_suscripcion_artista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="346" column="119" selection-start-line="346" selection-start-column="119" selection-end-line="346" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/suscribir_artista.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/suscribir_ente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redes_sociales.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions/agregar_redes_sociales.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -127,7 +127,7 @@ include("header_suscripcion.php");
                             <th>URL</th>
 
                             <th class="text-right white">
-                                <a  class="btn btn-info white"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#redes_sociales"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -181,6 +181,7 @@ include("header_suscripcion.php");
 </main>
 
 <?php
+include("redes_sociales.php");
 include("footer.php");
 ?>
 

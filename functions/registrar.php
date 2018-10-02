@@ -32,11 +32,17 @@ if(isset($_POST['registro']))
             $insertArt="insert into artistas_urbanos (resumen_artistico,usuarios_id_usuario) VALUES
             ('$resumen_artistico','$user_id_insert')";
             mysqli_query($dbcon,$insertArt) or die ($insertArt);
+            session_start();
+
+            $_SESSION['id']=$user_id_insert;
             echo"<script>window.open('../registrar_suscripcion_artista.php','_self')</script>";
         } 
         else if ($user_tipo=="1"){
              $insert_ente="insert into entes_culturales (usuarios_id_usuario) VALUES ('$user_id_insert')";
             mysqli_query($dbcon,$insert_ente) or die ($insert_ente);
+            session_start();
+
+            $_SESSION['id']=$user_id_insert;
             echo"<script>window.open('../registrar_suscripcion_ente.php?user=$user_id_insert','_self')</script>";
         }
     }else{

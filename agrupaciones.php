@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <p align="justify">
-                <form action="functions/agregar_agrupacion.php" id="form_titulos" name="form_titulos" method="post">
+                <form action="functions/agregar_agrupacion.php" id="form_agru" name="form_agru" method="post">
                     <div class="form-row">
                         <input type="text" name="grupo" class="form-control" id="grupo" placeholder="Grupo" required/>
                     </div>
@@ -27,7 +27,7 @@
                     </div>
                     <br>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" name="form_titulos  ">Aceptar</button>
+                        <button type="submit" class="btn btn-secondary" name="form_agru">Aceptar</button>
                     </div>
                 </form>
                 </p>

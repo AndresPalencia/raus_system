@@ -41,7 +41,7 @@ if(isset($_POST['login']))
 
                 while($row_artista=mysqli_fetch_array($run_artista)){
                     $resumen=$row_artista['resumen_artistico'];
-                    if ($nombre_artista=="") {
+                    if ($resumen=="") {
                         echo "<script>window.open('registrar_suscripcion_artista.php','_self')</script>";
                     }else{
                         echo "<script>window.open('raus.php','_self')</script>";

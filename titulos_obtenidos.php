@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-secondary" name="form_titulos  ">Aceptar</button>
+                        <button type="submit" class="btn btn-secondary" name="form_titulos">Aceptar</button>
                     </div>
                 </form>
                 </p>

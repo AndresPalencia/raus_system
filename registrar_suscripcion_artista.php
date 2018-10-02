@@ -12,18 +12,18 @@ while($row_artista=mysqli_fetch_array($run_select)){
 }
 
 
-$table_estudios="SELECT * FROM artistas_estudios_realizados where artistas_urbanos_id_artistas='$id_user'";
+$table_estudios="SELECT * FROM artistas_estudios_realizados where artistas_urbanos_id_artistas='$id_artista'";
 $run_query_estudios=mysqli_query($dbcon,$table_estudios);
 
-$table_titulos="SELECT * FROM artistas_titulos_obtenidos where artistas_urbanos_id_artistas='$id_user'";
+$table_titulos="SELECT * FROM artistas_titulos_obtenidos where artistas_urbanos_id_artistas='$id_artista'";
 $run_query_titulos=mysqli_query($dbcon,$table_titulos);
 
-$table_agru="SELECT * FROM artistas_agrupaciones where artistas_urbanos_id_artistas='$id_user'";
+$table_agru="SELECT * FROM artistas_agrupaciones where artistas_urbanos_id_artistas='$id_artista'";
 $run_query_agru=mysqli_query($dbcon,$table_agru);
 
 $table_esp="SELECT artistas_esp_artisticas.artistas_urbanos_id_artistas, 
 esp_artisticas.nombre_especialidad_artistica FROM artistas_esp_artisticas 
-INNER JOIN esp_artisticas ON artistas_esp_artisticas.artistas_urbanos_id_artistas 
+INNER JOIN esp_artisticas ON artistas_esp_artisticas.esp_artisticas_id_esp_artistica 
 =esp_artisticas.id_esp_artistica 
 WHERE artistas_esp_artisticas.artistas_urbanos_id_artistas='$id_artista'";
 $run_query_esp=mysqli_query($dbcon,$table_esp);
@@ -116,14 +116,14 @@ include("header_suscripcion.php");
                 <h3>Suscripci&oacute;n</h3>
             </div>
 
-            <form action="registrar.php" id="registro" name="registro" method="post" role="form" >
+            <form action="functions/suscribir_artista.php" id="suscripcion" name="suscripcion" method="post" role="form" >
                 <br>
                 <br>
                 <div>
                     <h4><strong>Resumen Artistico</strong></h4>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="resumen" id="resumen" rows="7" ></textarea>
+                    <textarea class="form-control" name="resumen" id="resumen" rows="7" required></textarea>
                     <div class="validation"></div>
                 </div>
                 <br>
@@ -195,7 +195,7 @@ include("header_suscripcion.php");
                         <?php
                         if(mysqli_num_rows($run_query_titulos)>0)
                         {
-                            while($row = $run_query_titulos->fetch_assoc()) {
+                            while($rowTitulos = $run_query_titulos->fetch_assoc()) {
                                 ?>
                                 <tr>
                                     <td><?php echo utf8_encode($rowTitulos["titulo"]) ?></td>
@@ -237,7 +237,7 @@ include("header_suscripcion.php");
                         <?php
                         if(mysqli_num_rows($run_query_agru)>0)
                         {
-                            while($row = $run_query_agru->fetch_assoc()) {
+                            while($rowAgru= $run_query_agru->fetch_assoc()) {
                                 ?>
                                 <tr>
                                     <td><?php echo utf8_encode($rowAgru["grupo"]) ?></td>
@@ -270,7 +270,7 @@ include("header_suscripcion.php");
                             <th>Especialidad Artistica</th>
 
                             <th class="text-right white">
-                                <a  class="btn btn-info white"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a class="btn btn-info white" href="" data-toggle="modal" data-target="#esp_artisticas"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -310,7 +310,7 @@ include("header_suscripcion.php");
                             <th>URL</th>
 
                             <th class="text-right white">
-                                <a  class="btn btn-info white"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#redes_sociales"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -344,7 +344,7 @@ include("header_suscripcion.php");
 
                 </div>
                 <div>
-                    <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
+                    <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="suscripcion" >
 
                 </div>
                 <?php
@@ -355,6 +355,10 @@ include("header_suscripcion.php");
             </form>
             <?php
             include ("estudios_realizados.php");
+            include ("titulos_obtenidos.php");
+            include ("agrupaciones.php");
+            include ("especialidades_artisticas.php");
+            include ("redes_sociales.php");
 
             ?>
         </div>
