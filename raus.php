@@ -52,7 +52,7 @@ include("header_suscripcion.php");
   </div>
 <div>
   
-<h1>ESTAS ADENTRO DEL SISTEMA, YUPIII!!!!
+<h1>ESTAS DENTRO DEL SISTEMA, YUPIII!!!!
 </h1>  
 </div>
 

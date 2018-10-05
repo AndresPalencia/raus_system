@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a74e9341-ecc0-41b5-901a-b15bbdaf3c57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/especialidades_artisticas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/agregar_especialidades_artisticas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/agregar_redes_sociales.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/suscribir_artista.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redes_sociales.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agrupaciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/agrupaciones.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/agregar_agrupacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/agregar_agrupacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/agregar_titulo_obtenido.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/agregar_titulo_obtenido.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/registrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/registrar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrar_suscripcion_artista.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrar_suscripcion_artista.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrar_suscripcion_ente.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrar_suscripcion_ente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/titulos_obtenidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/titulos_obtenidos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/agregar_redes_sociales.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/agregar_redes_sociales.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raus.php" beforeDir="false" afterPath="$PROJECT_DIR$/raus.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,22 +67,23 @@
     <session id="739447655">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.56" value="1" />
+          <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.68" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="21" />
-          <entry key="php" value="4623" />
+          <entry key="php" value="4627" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
@@ -104,7 +91,7 @@
         <counts>
           <entry key="CSS" value="21" />
           <entry key="HTML" value="12" />
-          <entry key="PHP" value="4562" />
+          <entry key="PHP" value="4566" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="SQL" value="49" />
         </counts>
@@ -114,7 +101,7 @@
           <entry key="artistas_urbanos" value="1" />
           <entry key="css" value="2" />
           <entry key="esp_artisticas" value="1" />
-          <entry key="php" value="46" />
+          <entry key="php" value="47" />
           <entry key="rnc" value="1" />
           <entry key="sql" value="2" />
           <entry key="usuarios" value="1" />
@@ -124,7 +111,7 @@
         <counts>
           <entry key="CSS" value="2" />
           <entry key="Database Element" value="3" />
-          <entry key="PHP" value="46" />
+          <entry key="PHP" value="47" />
           <entry key="RNG Compact" value="1" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -133,20 +120,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="459" column="55" lean-forward="true" selection-start-line="459" selection-start-column="55" selection-end-line="459" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/registrar_suscripcion_ente.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -155,7 +133,7 @@
         <entry file="file://$PROJECT_DIR$/logout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
-              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -163,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="740">
               <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
             </state>
           </provider>
@@ -172,7 +150,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/registrar_suscripcion_artista.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
+            <state relative-caret-position="6920">
               <caret line="346" column="119" selection-start-line="346" selection-start-column="119" selection-end-line="346" selection-end-column="119" />
             </state>
           </provider>
@@ -187,11 +165,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/agregar_redes_sociales.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+            <state relative-caret-position="240">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/raus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -217,7 +204,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions/registrar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="720">
               <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
             </state>
           </provider>
@@ -261,6 +248,7 @@
         <option value="$PROJECT_DIR$/functions/suscribir_artista.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/functions/agregar_redes_sociales.php" />
+        <option value="$PROJECT_DIR$/raus.php" />
       </list>
     </option>
   </component>
@@ -342,12 +330,13 @@
       <workItem from="1538236440070" duration="11563000" />
       <workItem from="1538319526117" duration="14806000" />
       <workItem from="1538367838769" duration="208000" />
-      <workItem from="1538493831008" duration="20859000" />
+      <workItem from="1538493831008" duration="21825000" />
+      <workItem from="1538518724175" duration="74000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77677000" />
+    <option name="totallyTimeSpent" value="78717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -360,9 +349,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798116" visible="true" weight="0.1433162" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49798116" visible="true" weight="0.14524421" />
       <window_info id="Structure" order="1" sideWeight="0.50201887" side_tool="true" weight="0.21786633" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -530,45 +518,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/registrar.php" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="459" column="55" lean-forward="true" selection-start-line="459" selection-start-column="55" selection-end-line="459" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+        <state relative-caret-position="9180">
+          <caret line="459" column="55" selection-start-line="459" selection-start-column="55" selection-end-line="459" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/registrar.php">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registrar_suscripcion_ente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="740">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registrar_suscripcion_artista.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
+        <state relative-caret-position="6920">
           <caret line="346" column="119" selection-start-line="346" selection-start-column="119" selection-end-line="346" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redes_sociales.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -586,24 +568,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
+    <entry file="file://$PROJECT_DIR$/functions/registrar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redes_sociales.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="720">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/agregar_redes_sociales.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registrar_suscripcion_ente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>

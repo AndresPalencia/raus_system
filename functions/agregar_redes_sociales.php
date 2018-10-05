@@ -22,7 +22,7 @@ if(isset($_POST['form_red_soc'])){
                 $run_red_soc = mysqli_query($dbcon, $insert_red_soc);
                 echo "<script>window.open('../registrar_suscripcion_ente.php','_self')</script>";
 
-                
+
             }
 
         }else{
