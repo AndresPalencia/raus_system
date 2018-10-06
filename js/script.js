@@ -15,6 +15,9 @@ function readRecords() {
      $.get("ajax/redes_artista/readRecords.php", {}, function (data, status) {
         $(".redes_content").html(data);
     });
+      $.get("ajax/redes_ente/readRecords.php", {}, function (data, status) {
+        $(".redes_sociales_entes_content").html(data);
+    });
 }
 
 // Add Record
@@ -505,6 +508,92 @@ function UpdateRedDetails() {
 function DeleteRed(id) {
 
         $.post("ajax/redes_artista/deleteRed.php", {
+                id: id
+            },
+            function (data, status) {
+                // reload Users by using readRecords();
+                readRecords();
+            }
+        );
+
+}
+
+function addRecordRed_Ente() {
+    
+    // get values
+    var redes_sociales = $("#redes_sociales").val();
+    var url = $("#url").val();
+
+    if (redes_sociales=="0" || url=="" ) {
+        alertify.error("Todos los campos son obligatorios!");
+    } else{
+        $.post("ajax/redes_ente/addRecord.php", {
+        redes_sociales: redes_sociales,
+        url: url
+    }, function (data, status) {
+        // close the popup
+        $("#redes_sociales_popup").modal("hide");
+
+        // read records again
+        readRecords();
+
+        // clear fields from the popup
+        $("#redes_sociales").val("");
+        $("#url").val("");
+        alertify.success("Red Social Agregada!");
+    });
+    } // Add record
+    
+  
+}
+
+function GetRed_EnteDetails(id_red) {
+    // Add User ID to the hidden field for furture usage
+    $("#hidden_user_id_red").val(id_red);
+
+    $.post("ajax/redes_ente/readRedDetails.php", {
+            id_red: id_red
+        },
+        function (data, status) {
+            // PARSE json data
+            var red = JSON.parse(data);
+            // Assing existing values to the modal popup fields
+            $("#update_redes_sociales").val(red.redes_sociales_id_redes_sociales);
+            $("#update_url").val(red.url_red_social);
+
+        }
+    );
+    // Open modal popup
+    $("#update_redes_sociales_popup").modal("show");
+}
+
+function UpdateRedDetails_Ente() {
+    // get values
+    var update_redes_sociales = $("#update_redes_sociales").val();
+    var update_url = $("#update_url").val();
+
+    // get hidden field value
+    var id = $("#hidden_user_id_red").val();
+
+
+    // Update the details by requesting to the server using ajax
+    $.post("ajax/redes_ente/updateRedDetails.php", {
+            id: id,
+            update_redes_sociales: update_redes_sociales,
+            update_url: update_url
+        },
+        function (data, status) {
+            // hide modal popup
+            $("#update_redes_sociales_popup").modal("hide");
+            // reload Users by using readRecords();
+            readRecords();
+        }
+    );
+}
+
+function Delete_EnteRed(id) {
+
+        $.post("ajax/redes_ente/deleteRed.php", {
                 id: id
             },
             function (data, status) {

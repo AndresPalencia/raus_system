@@ -1,13 +1,13 @@
 <?php
 include("../database/db_conection.php");
-
+  session_start();
 if(isset($_POST['suscripcion'])) {
     $nombre_ente = $_POST['nombre_ente'];
     $rif_ente = $_POST['rif_ente'];
     $ubicacion = $_POST['ubicacion'];
     $razon = $_POST['razon'];
     $contrato = $_POST['contrato'];
-    $user_ente = $_POST['user_ente'];
+    $user_ente = $_SESSION['id']; 
 
     $updateUser="Update usuarios set licencia_contrato ='$contrato' where id_usuario='$user_ente'";
     $run_update_user=mysqli_query($dbcon,$updateUser);

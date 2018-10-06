@@ -16,11 +16,7 @@ while($row_artista=mysqli_fetch_array($run_select)){
 }
 
 
-$table_redes="SELECT entes_redes_sociales.identes_redes_sociales, entes_redes_sociales.url_red_social, 
-redes_sociales.red_social FROM entes_redes_sociales INNER JOIN redes_sociales 
-ON entes_redes_sociales.redes_sociales_id_redes_sociales=redes_sociales.id_redes_sociales 
-WHERE entes_redes_sociales.entes_culturales_id_ente_cultural='$id_ente_select'";
-$run_query_red=mysqli_query($dbcon,$table_redes) or die($table_redes);
+
 
 
 ?>
@@ -52,9 +48,17 @@ $run_query_red=mysqli_query($dbcon,$table_redes) or die($table_redes);
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
+<script
+  src="http://code.jquery.com/jquery-1.11.3.js"
+  integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0="
+  crossorigin="anonymous"></script>
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
+     <script src="js/script.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.css">
+<link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
+<script src="js/alertify/alertify.js"></script>
 
 </head>
 
@@ -119,39 +123,8 @@ include("header_suscripcion.php");
                     </div>
 
                 </div>
-                <div>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Red Social</th>
-                            <th>URL</th>
-
-                            <th class="text-right white">
-                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#redes_sociales"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if(mysqli_num_rows($run_query_red)>0)
-                        {
-                            while($rowRed = $run_query_red->fetch_assoc()) {
-                                ?>
-                                <tr>
-                                    <td><?php echo utf8_encode($rowRed["red_social"]) ?></td>
-                                    <td><a href='<?php echo utf8_encode($rowRed["url_red_social"]) ?>'</a><?php echo utf8_encode($rowRed["url_red_social"]) ?></td>
-
-                                    <td class="text-right">
-                                        <a  class="btn btn-danger button-red"><i class="fa fa-trash white" aria-hidden="true"></i></a>
-                                        <a  class="btn btn-warning"><i class="fa fa-edit white" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                        ?>
-
-                    </table>
+                <div class="redes_sociales_entes_content">
+                   
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
@@ -166,6 +139,7 @@ include("header_suscripcion.php");
 
                 </div>
                 <?php
+                include("redes_sociales_entes.php");
                 include ("contrato.php");
                 ?>
 
@@ -181,7 +155,7 @@ include("header_suscripcion.php");
 </main>
 
 <?php
-include("redes_sociales.php");
+
 include("footer.php");
 ?>
 

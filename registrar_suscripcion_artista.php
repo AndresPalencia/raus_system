@@ -167,7 +167,7 @@ include("header_suscripcion.php");
             include ("titulos_obtenidos.php");
             include ("agrupaciones.php");
             include ("especialidades_artisticas.php");
-            include ("redes_sociales.php");
+            include ("redes_sociales_artistas.php");
 
             ?>
 
