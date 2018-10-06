@@ -12,28 +12,6 @@ while($row_artista=mysqli_fetch_array($run_select)){
 }
 
 
-
-
-
-
-$table_agru="SELECT * FROM artistas_agrupaciones where artistas_urbanos_id_artistas='$id_artista'";
-$run_query_agru=mysqli_query($dbcon,$table_agru);
-
-$table_esp="SELECT artistas_esp_artisticas.artistas_urbanos_id_artistas, 
-esp_artisticas.nombre_especialidad_artistica FROM artistas_esp_artisticas 
-INNER JOIN esp_artisticas ON artistas_esp_artisticas.esp_artisticas_id_esp_artistica 
-=esp_artisticas.id_esp_artistica 
-WHERE artistas_esp_artisticas.artistas_urbanos_id_artistas='$id_artista'";
-$run_query_esp=mysqli_query($dbcon,$table_esp);
-
-$table_redes="SELECT artistas_redes_sociales.id_artistas_redes_sociales, 
-artistas_redes_sociales.url_red_social, redes_sociales.red_social FROM artistas_redes_sociales 
-INNER JOIN redes_sociales ON artistas_redes_sociales.redes_sociales_id_redes_sociales
-=redes_sociales.id_redes_sociales 
-WHERE artistas_redes_sociales.artistas_urbanos_id_artistas='$id_artista'";
-$run_query_red=mysqli_query($dbcon,$table_redes);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -158,42 +136,7 @@ include("header_suscripcion.php");
                     </div>
 
                 </div>
-                <div>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Grupo</th>
-                            <th>Duracion</th>
-                            <th>Año</th>
-                            <th>Lugar</th>
-                            <th class="text-right white">
-                                <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#agrupaciones"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if(mysqli_num_rows($run_query_agru)>0)
-                        {
-                            while($rowAgru= $run_query_agru->fetch_assoc()) {
-                                ?>
-                                <tr>
-                                    <td><?php echo utf8_encode($rowAgru["grupo"]) ?></td>
-                                    <td><?php echo utf8_encode($rowAgru["duracion"] )?></td>
-                                    <td><?php echo utf8_encode($rowAgru["anio"]) ?></td>
-                                    <td><?php echo utf8_encode($rowAgru["lugar"]) ?></td>
-                                    <td class="text-right">
-                                        <a  class="btn btn-danger button-red"><i class="fa fa-trash white" aria-hidden="true"></i></a>
-                                        <a  class="btn btn-warning"><i class="fa fa-edit white" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                        ?>
-
-                    </table>
-                </div>
+                <div class="agrupaciones_content"></div>
                 <br>
                 <div >
                     <div >
@@ -201,36 +144,7 @@ include("header_suscripcion.php");
                     </div>
 
                 </div>
-                <div>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Especialidad Artistica</th>
-
-                            <th class="text-right white">
-                                <a class="btn btn-success white" href="" data-toggle="modal" data-target="#esp_artisticas"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if(mysqli_num_rows($run_query_esp)>0)
-                        {
-                            while($rowEsp = $run_query_esp->fetch_assoc()) {
-                                ?>
-                                <tr>
-                                    <td><?php echo utf8_encode($rowEsp["nombre_especialidad_artistica"]) ?></td>
-                                    <td class="text-right">
-                                        <a  class="btn btn-danger button-red"><i class="fa fa-trash white" aria-hidden="true"></i></a>
-                                        <a  class="btn btn-warning"><i class="fa fa-edit white" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                        ?>
-
-                    </table>
+                <div class="especialidades_content">
                 </div>
 
                 <br>
@@ -240,40 +154,7 @@ include("header_suscripcion.php");
                     </div>
 
                 </div>
-                <div>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Red Social</th>
-                            <th>URL</th>
-
-                            <th class="text-right white">
-                                <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#redes_sociales"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if(mysqli_num_rows($run_query_red)>0)
-                        {
-                            while($rowRed = $run_query_red->fetch_assoc()) {
-                                ?>
-                                <tr>
-                                    <td><?php echo utf8_encode($rowRed["red_social"]) ?></td>
-                                    <td><a href='<?php echo utf8_encode($rowRed["url_red_social"]) ?>'</a><?php echo utf8_encode($rowRed["url_red_social"]) ?></td>
-
-                                    <td class="text-right">
-                                        <a  class="btn btn-danger button-red"><i class="fa fa-trash white" aria-hidden="true"></i></a>
-                                        <a  class="btn btn-warning"><i class="fa fa-edit white" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                        ?>
-
-                    </table>
-                </div>
+                <div class="redes_content"></div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <input type="checkbox" name="contrato" value="1" required> Aceptar
@@ -281,20 +162,7 @@ include("header_suscripcion.php");
                     </div>
 
                 </div>
-           
-
-                <div>
-                    <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="suscripcion" >
-
-                </div>
-
-                <?php
-                include ("contrato.php");
-
-                ?>
-
-      
-            <?php
+                 <?php
             include ("estudios_realizados.php");
             include ("titulos_obtenidos.php");
             include ("agrupaciones.php");
@@ -302,7 +170,22 @@ include("header_suscripcion.php");
             include ("redes_sociales.php");
 
             ?>
-        </div>
+
+                <div>
+                    <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="suscripcion" >
+
+                </div>
+
+
+
+                </form >
+                <?php
+                include ("contrato.php");
+
+                ?>
+
+      
+               </div>
 </div>
 </section>
 <br>
