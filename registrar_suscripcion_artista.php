@@ -14,8 +14,7 @@ while($row_artista=mysqli_fetch_array($run_select)){
 
 
 
-$table_titulos="SELECT * FROM artistas_titulos_obtenidos where artistas_urbanos_id_artistas='$id_artista'";
-$run_query_titulos=mysqli_query($dbcon,$table_titulos);
+
 
 $table_agru="SELECT * FROM artistas_agrupaciones where artistas_urbanos_id_artistas='$id_artista'";
 $run_query_agru=mysqli_query($dbcon,$table_agru);
@@ -151,41 +150,7 @@ include("header_suscripcion.php");
                         <h4><strong>Titulos Obtenidos</strong></h4>
                     </div>
                 </div>
-                <div>
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th>Titulo</th>
-                            <th>Institución</th>
-                            <th>Año</th>
-                            <th class="text-right white">
-
-                                <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#titulos_obtenidos"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if(mysqli_num_rows($run_query_titulos)>0)
-                        {
-                            while($rowTitulos = $run_query_titulos->fetch_assoc()) {
-                                ?>
-                                <tr>
-                                    <td><?php echo utf8_encode($rowTitulos["titulo"]) ?></td>
-                                    <td><?php echo utf8_encode($rowTitulos["institucion"]) ?></td>
-                                    <td><?php echo utf8_encode($rowTitulos["anio"]) ?></td>
-                                    <td class="text-right">
-                                        <a  class="btn btn-danger button-red"><i class="fa fa-trash white" aria-hidden="true"></i></a>
-                                        <a  class="btn btn-warning"><i class="fa fa-edit white" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                        ?>
-
-                    </table>
-                </div>
+                <div class="titulos_obtenidos_content"></div>
                 <br>
                 <div >
                     <div >
