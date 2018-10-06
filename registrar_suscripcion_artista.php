@@ -12,8 +12,7 @@ while($row_artista=mysqli_fetch_array($run_select)){
 }
 
 
-$table_estudios="SELECT * FROM artistas_estudios_realizados where artistas_urbanos_id_artistas='$id_artista'";
-$run_query_estudios=mysqli_query($dbcon,$table_estudios);
+
 
 $table_titulos="SELECT * FROM artistas_titulos_obtenidos where artistas_urbanos_id_artistas='$id_artista'";
 $run_query_titulos=mysqli_query($dbcon,$table_titulos);
@@ -66,6 +65,10 @@ $run_query_red=mysqli_query($dbcon,$table_redes);
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
     <!-- JavaScript Libraries -->
+    <script
+  src="http://code.jquery.com/jquery-1.11.3.js"
+  integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0="
+  crossorigin="anonymous"></script>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -84,6 +87,14 @@ $run_query_red=mysqli_query($dbcon,$table_redes);
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+
+    <script src="js/script.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.css">
+<link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
+<script src="js/alertify/alertify.js"></script>
+
+
 
 </head>
 
@@ -116,12 +127,13 @@ include("header_suscripcion.php");
                 <h3>Suscripci&oacute;n</h3>
             </div>
 
-            <form action="functions/suscribir_artista.php" id="suscripcion" name="suscripcion" method="post" role="form" >
+            <form action="functions/suscribir_artista.php" id="suscripcion" name="suscripcion" method="post" >
                 <br>
                 <br>
                 <div>
                     <h4><strong>Resumen Artistico</strong></h4>
                 </div>
+
                 <div class="form-group">
                     <textarea class="form-control" name="resumen" id="resumen" rows="7" required></textarea>
                     <div class="validation"></div>
@@ -131,52 +143,13 @@ include("header_suscripcion.php");
                     <div >
                        <h4><strong>Estudios Realizados</strong></h4>
                     </div>
+                <div class="estudios_realizados_content"></div>
 
-                </div>
-
-                <div>
-                    <table class="table ">
-                        <thead>
-                        <tr>
-                            <th>Estudio</th>
-                            <th>Institución</th>
-                            <th>Duracion</th>
-                            <th>Año</th>
-                            <th class="text-right white">
-
-                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#estudios_realizados"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if(mysqli_num_rows($run_query_estudios)>0)
-                        {
-                            while($row = $run_query_estudios->fetch_assoc()) {
-                                ?>
-                                <tr>
-                                    <td><?php echo utf8_encode($row["estudio"]) ?></td>
-                                    <td><?php echo utf8_encode($row["institucion"]) ?></td>
-                                    <td><?php echo utf8_encode($row["duracion"]) ?></td>
-                                    <td><?php echo utf8_encode($row["anio"]) ?></td>
-                                    <td class="text-right">
-                                        <a  class="btn btn-danger button-red"><i class="fa fa-trash white" aria-hidden="true"></i></a>
-                                        <a  class="btn btn-warning"><i class="fa fa-edit white" aria-hidden="true"></i></a>
-                                    </td>
-                                </tr>
-                                <?php
-                            }
-                        }
-                        ?>
-
-                    </table>
-                </div>
                 <br>
                 <div >
                     <div >
                         <h4><strong>Titulos Obtenidos</strong></h4>
                     </div>
-
                 </div>
                 <div>
                     <table class="table">
@@ -187,7 +160,7 @@ include("header_suscripcion.php");
                             <th>Año</th>
                             <th class="text-right white">
 
-                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#titulos_obtenidos"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#titulos_obtenidos"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -229,7 +202,7 @@ include("header_suscripcion.php");
                             <th>Año</th>
                             <th>Lugar</th>
                             <th class="text-right white">
-                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#agrupaciones"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#agrupaciones"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -270,7 +243,7 @@ include("header_suscripcion.php");
                             <th>Especialidad Artistica</th>
 
                             <th class="text-right white">
-                                <a class="btn btn-info white" href="" data-toggle="modal" data-target="#esp_artisticas"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a class="btn btn-success white" href="" data-toggle="modal" data-target="#esp_artisticas"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -310,7 +283,7 @@ include("header_suscripcion.php");
                             <th>URL</th>
 
                             <th class="text-right white">
-                                <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#redes_sociales"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
+                                <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#redes_sociales"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>
                             </th>
                         </tr>
                         </thead>
@@ -343,16 +316,19 @@ include("header_suscripcion.php");
                     </div>
 
                 </div>
+           
+
                 <div>
                     <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="suscripcion" >
 
                 </div>
+
                 <?php
                 include ("contrato.php");
 
                 ?>
 
-            </form>
+      
             <?php
             include ("estudios_realizados.php");
             include ("titulos_obtenidos.php");
