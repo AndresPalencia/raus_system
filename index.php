@@ -177,12 +177,24 @@ include("header.php");
             </div>
 
         </div>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-6 twitter-content" >
+                    <a class="twitter-timeline" data-lang="es" data-height="850" data-link-color="#00c5cd" href="https://twitter.com/rausystem">Tweets by Raus</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                <div class="col-md-6">
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                    <div class="elfsight-app-5e3f40e1-f90b-4ff1-ae0b-9d2bacd7e7e8"></div>
+                </div>
+            </div>
+
+        </div>
     </section><!-- #Conocenos -->
     <br><br><br>
 
     <!--==========================
       Noticias Section
-    ============================-->
+    ============================
 
     <section id="portfolio"  class="section-bg" >
         <div class="container">
@@ -334,24 +346,13 @@ include("header.php");
             </div>
             <br>
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 twitter-content" >
-                    <a class="twitter-timeline" data-lang="es" data-height="850" data-link-color="#00c5cd" href="https://twitter.com/rausystem">Tweets by Raus</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-                <div class="col-md-6">
-                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                    <div class="elfsight-app-5e3f40e1-f90b-4ff1-ae0b-9d2bacd7e7e8"></div>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- #Noticias -->
+</section> #Noticias -->
+    
+    
 
     <!--==========================
       Crew Section
-    ============================-->
+    ============================
     <br>
     <section id="team">
         <div class="container">
@@ -435,7 +436,7 @@ include("header.php");
             </div>
 
         </div>
-    </section><!-- #Crew -->
+    </section> #Crew-->
     <br>
 
 
@@ -445,7 +446,9 @@ include("header.php");
     ============================-->
 
     <br>
-    <div class="form">
+    <div class="form" <?php if (isset($_SESSION['user'])) 
+        echo "style='display:none;'"; ?>
+        >
         <section id="contact" class="">
             <div class="container">
 
@@ -570,7 +573,7 @@ include("header.php");
                      -->
 
                     <div>
-                        <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="registro" >
+                        <input class="text-center btn btn-lg btn-block" type="submit" id="registro" value="Registrarse" name="registro" >
                     </div>
                 </form>
 
@@ -591,6 +594,7 @@ include("footer.php");
     $("#phone").inputmask({"mask": "999-9999"});
 
     $(document).ready(function(){
+
         $("#cbx_estado").change(function () {
             $('#cbx_parroquia').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
             $("#cbx_estado option:selected").each(function () {
@@ -603,6 +607,7 @@ include("footer.php");
     });
 
     $(document).ready(function(){
+
         $("#cbx_municipio").change(function () {
             $("#cbx_municipio option:selected").each(function () {
                 id_municipio = $(this).val();
@@ -612,6 +617,44 @@ include("footer.php");
             });
         })
     });
+
+
+
+   $("#login").click(function(){  
+      
+        username=$("#user").val();  
+        password=$("#password").val();  
+         $.ajax({  
+            type: "POST",  
+            url: "login.php",  
+            data: "user="+username+"&password="+password,  
+            success: function(html){  
+
+              if(html=='ente_suscripcion')  
+              {  
+                window.open('registrar_suscripcion_ente.php','_self');                 
+              }else if(html=='ente'){
+                window.open('raus.php','_self');
+              }else if (html=='artista_suscripcion') {
+                window.open('registrar_suscripcion_artista.php','_self');
+              } else if (html=='artista') {
+                window.open('raus.php','_self');
+              }else
+              {  
+                alertify.error("Alguno de sus datos son incorrectos."); 
+              }  
+            },  
+            beforeSend:function()  
+            {  
+                 $("#add_err").html("Cargando...")  
+            }  
+        });  
+         return false;  
+    });  
+ 
+
+
+
 </script>
 <script src="js/registrar.js"></script>
 

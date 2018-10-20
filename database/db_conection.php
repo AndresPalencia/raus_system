@@ -1,7 +1,7 @@
 <?php
 
-$dbcon=mysqli_connect("localhost","id7479105_root","Patron_AnK");
+$dbcon=mysqli_connect("localhost","root","");
 
-mysqli_select_db($dbcon,"id7479105_raus_db");
+mysqli_select_db($dbcon,"raus_db");
 
 ?>
