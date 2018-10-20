@@ -1,7 +1,7 @@
 <?php
 include("database/db_conection.php");
 include("includes/estados.php");
-session_start();
+include('session.php');
 $id_user=$_SESSION['id'];
 
 

@@ -6,7 +6,7 @@ include("../database/db_conection.php");
 	$queryM="SELECT * FROM municipios WHERE estados_id_estado='$id_estado' ORDER BY municipio ASC";
 	$resultadoM=mysqli_query($dbcon,$queryM);
 
-	$html= "<option value='0'>Seleccionar Municipio</option>";
+	$html= "<option value=''>Seleccionar Municipio</option>";
 	
 	while($rowM = $resultadoM->fetch_assoc())
 	{

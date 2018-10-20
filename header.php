@@ -1,8 +1,12 @@
+   <script type="text/javascript">
+  history.forward();
+  document.oncontextmenu = function(){return false;}
+</script>
   <!--==========================
     Header
   ===========================-->
  
-  <form action="login.php" method="POST">
+  <form action="login.php" method="POST" id="login_form">
   <header id="header">
     <div class="container-fluid">
 
@@ -13,9 +17,11 @@
       <!-- Menu de navegacion superior -->
       <nav id="nav-menu-container">
         <ul class="nav-menu">
+          <li><a href="#contact">Registrate</a></li>
           <li><a href="#about">Conocenos</a></li>
           <li><a href="#portfolio">Noticias</a></li>
           <li><a href="#team">Crew</a></li>
+           
          
          <!-- <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
@@ -34,17 +40,19 @@
           </div></li>-->
             <li>
 
-               <input type="text" name="user" class="form-control-login" id="user" placeholder="C.I o N&uacute;mero de Registro" required data-msg="Ingrese su numero de usuario"/>
+               <input type="text" name="user" class="form-control-login" id="user" placeholder="C.I RIF o Num de Registro" required data-msg="Ingrese su numero de usuario"/>
            </li>
-<li>
-                    <input type="password" class="form-control-login" name="password" id="password" placeholder="Contraseña" required data-msg="Ingrese su Contraseña" />
+            <li>
+               <input type="password" class="form-control-login" name="password" id="password" placeholder="Contraseña" required data-msg="Ingrese su Contraseña" />
     
-             </li><li>
-                    <div class="text-center">
-                    <input class="text-center btn btn-lg btn-block form-control btn-get-started-login" type="submit" value="Ingresar" name="login">
-                  </div>                   
+             </li>
+             <li>
+               <div class="text-center">
+                  <input class="text-center btn btn-lg btn-block form-control btn-get-started-login" type="submit" value="Ingresar" name="login" id="login">
+                </div>                   
           
-          </li> 
+           </li> 
+       
         </ul>
       </nav>
       <!-- Cierro menu de navegacion superior -->

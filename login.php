@@ -7,10 +7,11 @@ if(isset($_POST['login']))
     $user_user=$_POST['user'];
     $user_pass=$_POST['password'];
 
-    $check_user="select * from usuarios WHERE (numero_unico_registro='$user_user' OR doc_ident='$user_user')   AND contrasena='$user_pass'";
+
+    $check_user="SELECT * from usuarios WHERE (numero_unico_registro='$user_user' OR doc_ident='$user_user')";
 
     $run=mysqli_query($dbcon,$check_user);
-
+   
     if(mysqli_num_rows($run))
     {
         session_start();
@@ -18,12 +19,14 @@ if(isset($_POST['login']))
         $_SESSION['user']=$user_user;//here session is used and value of $user_email store in $_SESSION.
 
         while($row=mysqli_fetch_array($run))  {
-            $tipo_usuario = $row['tipo_usuario'];
+             if (password_verify($user_pass,$row['contrasena'])== true) {
+                     $tipo_usuario = $row['tipo_usuario'];
             $id =$row['id_usuario'];
             $_SESSION['id']=$id;
+            $_SESSION['doc_ident'] = $row['doc_ident'];
 
             if ($tipo_usuario=="1") {
-                $ente="select * from entes_culturales WHERE usuarios_id_usuario='$id' ";
+                $ente="SELECT * from entes_culturales WHERE usuarios_id_usuario='$id' ";
                 $run_ente=mysqli_query($dbcon,$ente);
                 while($row_ente=mysqli_fetch_array($run_ente)){
                     $nombre_ente=$row_ente['nombre_ente'];
@@ -49,10 +52,13 @@ if(isset($_POST['login']))
                     }
                 }
             }
+        }else{
+              echo "<script>alert('Alguno de sus datos son incorrectos.')</script>";
+        //  echo "<span>Alguno de sus datos son incorrectos.</span>";
+        echo "<script>window.open('index.php','_self')</script>";
+
         }
-
-
-
+    }
 
     }
     else
@@ -61,8 +67,6 @@ if(isset($_POST['login']))
         echo "<script>alert('Alguno de sus datos son incorrectos.')</script>";
         //  echo "<span>Alguno de sus datos son incorrectos.</span>";
         echo "<script>window.open('index.php','_self')</script>";
-
-
 
     }
 }

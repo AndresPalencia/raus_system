@@ -5,7 +5,7 @@ include("../database/db_conection.php");
 	
 	$queryP = "SELECT * FROM parroquias WHERE municipios_id_municipio='$id_municipio' ORDER BY parroquia";
 	$resultadoP=mysqli_query($dbcon,$queryP);
-	$html= "<option value='0'>Seleccionar Parroquia</option>";
+	$html= "<option value=''>Seleccionar Parroquia</option>";
 
 	while($rowP = $resultadoP->fetch_assoc())
 	{

@@ -54,6 +54,11 @@ include("includes/estados.php");
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
+    <script src="js/alertify/alertify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
 
 </head>
 
@@ -100,8 +105,8 @@ include("header.php");
                 <div class="carousel-content col-md-6">
                     <h2>BIENVENIDO</h2>
                     <p></p>
-                    <a href="#contact" class="btn-get-started scrollto">Registrate</a>
-                    <!-- <a href="#login" class="btn-get-started scrollto">Ingresa</a>-->
+                    <!--<a href="#contact" class="btn-get-started scrollto">Registrate</a>-->
+                    <!--<a href="#login" class="btn-get-started scrollto">Ingresa</a>-->
                 </div>
             </div>
 
@@ -445,7 +450,7 @@ include("header.php");
             <div class="container">
 
                 <div id="errormessage"></div>
-                <form action="functions/registrar.php" id="registro" name="registro" method="post" >
+                <form action="functions/registrar.php" id="registro" name="registro" method="post" novalidate onsubmit="return validaCampos();">
 
                     <div class="section-header">
                         <h3>Registro</h3>
@@ -474,12 +479,19 @@ include("header.php");
                             <div class="validation"></div>
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="lastname" class="form-control" name="lastname" id="lastname" placeholder="Apellido" required data-msg="Ingrese su apellido" />
-                            <div class="validation"></div>
+                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Apellido" required data-msg="Ingrese su apellido" />
                         </div>
-                        <div class="form-group col-md-4">
-                            <input type="id" class="form-control" name="id_doc" id="id_doc" placeholder="C.I / RIF / Pasaporte" required data-msg="Ingrese su n&uacute;mero de documento" />
-                            <div class="validation"></div>
+                        <div class="form-group col-md-1">
+                            <select name="pre_id_doc" class="form-control" id="pre_id_doc">
+
+                                <option value="V">V</option>
+                                <option value="E">E</option>
+                                <option value="J">J</option>
+                                <option value="G">G</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" name="id_doc" id="id_doc" placeholder="C.I / RIF" onkeypress="return validaNumericos(event)"/>
                         </div>
                     </div>
 
@@ -489,15 +501,15 @@ include("header.php");
                             <div class="validation"></div>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir contraseña" data-rule="required" data-msg="Ingrese su password" />
+                            <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir Contraseña" data-rule="required" data-msg="Ingrese su password" />
                             <div class="validation"></div>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" required data-msg="Seleccione estado">
-                                <option value="0">Seleccionar Estado</option>
+                            <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" data-msg="Seleccione estado">
+                                <option value="">Seleccionar Estado</option>
                                 <?php while($row = $resultado->fetch_assoc()) { ?>
                                     <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
                                 <?php } ?>
@@ -506,15 +518,15 @@ include("header.php");
                         </div>
 
                         <div class="form-group col-md-4">
-                            <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" required data-msg="Seleccione municipio">
-                                <option value="0">Seleccionar Municipio</option>
+                            <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" data-msg="Seleccione municipio">
+                                <option value="">Seleccionar Municipio</option>
                             </select>
                             <div class="validation"></div>
                         </div>
 
                         <div class="form-group col-md-4">
-                            <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" required data-msg="Seleccione parroquia">
-                                <option value="0">Seleccionar Parroquia</option>
+                            <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" data-msg="Seleccione parroquia">
+                                <option value="">Seleccionar Parroquia</option>
                             </select>
                             <div class="validation"></div>
                         </div>
@@ -527,8 +539,18 @@ include("header.php");
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="phone" name="phone" class="form-control" id="phone" required placeholder=" Telefono (0000) 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
+                        <div class="form-group col-md-1">
+                            <select name="cod_tel" class="form-control" id="cod_tel">
+                                <option value="0212">0412</option>
+                                <option value="0414">0414</option>
+                                <option value="0424">0424</option>
+                                <option value="0416">0416</option>
+                                <option value="0426">0426</option>
+                                <option value="0412">0412</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <input type="phone" name="phone" class="form-control" id="phone" required placeholder=" Telefono 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
                             <div class="validation"></div>
                         </div>
 
@@ -566,6 +588,8 @@ include("footer.php");
 
 
 <script type="text/javascript">
+    $("#phone").inputmask({"mask": "999-9999"});
+
     $(document).ready(function(){
         $("#cbx_estado").change(function () {
             $('#cbx_parroquia').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
@@ -589,6 +613,7 @@ include("footer.php");
         })
     });
 </script>
+<script src="js/registrar.js"></script>
 
 
 </body>
