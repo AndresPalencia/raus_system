@@ -194,16 +194,6 @@ include("header_suscripcion.php");
 
 <?php
 include("footer.php");
-
-
-
-
 ?>
-
-
-
-
 </body>
 </html>
-
-

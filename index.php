@@ -135,7 +135,7 @@ include("header.php");
                     <div class="about-col">
                         <div class="img">
                             <img src="img/mission.jpg" alt="" class="img-fluid">
-                            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                            <!--<div class="icon"><i class="ion-ios-speedometer-outline"></i></div>-->
                         </div>
                         <h2 class="title"><a href="#">Misi&oacute;n</a></h2>
                         <p align="justify">
@@ -148,7 +148,7 @@ include("header.php");
                     <div class="about-col">
                         <div class="img">
                             <img src="img/plan.jpg" alt="" class="img-fluid">
-                            <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                            <!--<div class="icon"><i class="ion-ios-list-outline"></i></div>-->
                         </div>
                         <h2 class="title"><a href="#">Objetivos</a></h2>
                         <p>
@@ -165,7 +165,7 @@ include("header.php");
                     <div class="about-col">
                         <div class="img">
                             <img src="img/vision.jpg" alt="" class="img-fluid">
-                            <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                            <!--<div class="icon"><i class="ion-ios-eye-outline"></i></div>-->
                         </div>
                         <h2 class="title"><a href="#">Visi&oacute;n</a></h2>
                         <p align="justify">
@@ -465,80 +465,81 @@ include("header.php");
                             <h3>Seleccione</h3>
                             <center><div class="form col-md-4">
                                     <select class="form-control" name="cbx_tipo_user" class="form-control" id="cbx_tipo_user" placeholder="Tipo de usuario" required data-msg="Seleccione tipo de usuario">
-                                        <option value="">Seleccionar Opci&oacute;n</option>
-                                        <option value="1">Soy Ente Cultural</option>
-                                        <option value="2">Soy Artista Urbano</option>
+                                        <option value="">Seleccionar Opci&oacute;n</option><div class="required">*</div>
+                                        <option value="1" data-toggle="tooltip" data-placement="bottom" title="Ente">Soy Ente Cultural</option>
+                                        <option value="2" data-toggle="tooltip" data-placement="bottom" title="Artista">Soy Artista Urbano</option>
                                     </select>
                                 </div>
                             </center>
                         </div>
                     </section>
                     <br>
+                    <div class="required">* Todos los campos son obligatorios</div>
 
                     <br>
                     <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required data-msg="Ingrese su nombre" />
-                            <div class="validation"></div>
+                        <div class="form-group col-md-4">               
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required/>
+                            <div class="required">*</div>
                         </div>
                         <div class="form-group col-md-4">
-                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Apellido" required data-msg="Ingrese su apellido" />
+                            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Apellido" required/>
+                            <div class="required">*</div>
                         </div>
                         <div class="form-group col-md-1">
                             <select name="pre_id_doc" class="form-control" id="pre_id_doc">
 
                                 <option value="V">V</option>
                                 <option value="E">E</option>
-                                <option value="J">J</option>
-                                <option value="G">G</option>
                             </select>
                         </div>
                         <div class="form-group col-md-3">
-                            <input type="text" class="form-control" name="id_doc" id="id_doc" placeholder="C.I / RIF" onkeypress="return validaNumericos(event)"/>
+                            <input type="text" class="form-control" name="id_doc" id="id_doc" placeholder="C.I" onkeypress="return validaNumericos(event)"/>
+                            <div class="required">*</div>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" required data-msg="Ingrese su password" />
-                            <div class="validation"></div>
+                            <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" required/>
+                            <div class="required">*</div>
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir Contraseña" data-rule="required" data-msg="Ingrese su password" />
-                            <div class="validation"></div>
+                            <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir Contraseña" required/>
+                           <div class="required">*</div>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado" data-msg="Seleccione estado">
+                            <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado">
                                 <option value="">Seleccionar Estado</option>
                                 <?php while($row = $resultado->fetch_assoc()) { ?>
                                     <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
                                 <?php } ?>
                             </select>
-                            <div class="validation"></div>
+                            <div class="required">*</div>
                         </div>
 
                         <div class="form-group col-md-4">
-                            <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio" data-msg="Seleccione municipio">
+                            <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio">
                                 <option value="">Seleccionar Municipio</option>
                             </select>
-                            <div class="validation"></div>
+                            <div class="required">*</div>
                         </div>
 
                         <div class="form-group col-md-4">
-                            <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia" data-msg="Seleccione parroquia">
+                            <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia">
                                 <option value="">Seleccionar Parroquia</option>
                             </select>
-                            <div class="validation"></div>
+                            <div class="required">*</div>
                         </div>
 
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" name="address" rows="5" placeholder="Direcci&oacute;n"></textarea>
-                        <div class="validation"></div>
+                        <textarea class="form-control" id="address" name="address" rows="5" placeholder="Direcci&oacute;n"></textarea>
+                        <div class="required">*</div>
                     </div>
 
                     <div class="form-row">
@@ -553,13 +554,13 @@ include("header.php");
                             </select>
                         </div>
                         <div class="form-group col-md-5">
-                            <input type="phone" name="phone" class="form-control" id="phone" required placeholder=" Telefono 000-00-00" data-rule="phone" data-msg="Ingrese un telefono valido" />
-                            <div class="validation"></div>
+                            <input type="phone" name="phone" class="form-control" id="phone" required placeholder=" Telefono 000-00-00"/>
+                            <div class="required">*</div>
                         </div>
 
                         <div class="form-group col-md-6">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" required data-msg="Ingrese un correo valido" />
-                            <div class="validation"></div>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" />
+                            <div class="required">*</div>
                         </div>
                     </div>
 
@@ -573,7 +574,7 @@ include("header.php");
                      -->
 
                     <div>
-                        <input class="text-center btn btn-lg btn-block" type="submit" id="registro" value="Registrarse" name="registro" >
+                        <input class="text-center btn btn-lg btn-block" type="submit" id="registro_btn" value="Registrarse" name="registro" >
                     </div>
                 </form>
 
@@ -651,7 +652,150 @@ include("footer.php");
         });  
          return false;  
     });  
- 
+
+    $("#registro_btn").click(function(){  
+      
+        name=$('#name').val();
+        lastname=$('#lastname').val();
+        id_doc=$('#id_doc').val();
+        pre_id_doc=$('#pre_id_doc').val();
+        pass=$('#pass').val();
+        repass = $("#repass").val();
+        estado = $("#cbx_estado").val();
+        municipio = $("#cbx_municipio").val();
+        address=$('#address').val();
+        phone=$('#phone').val();
+        cod_tel=$('#cod_tel').val();
+        email=$('#email').val();  
+        cbx_parroquia=$('#cbx_parroquia').val();
+        cbx_tipo_user=$('#cbx_tipo_user').val(); 
+        val_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+
+        if($.trim(cbx_tipo_user) == ""){
+        alertify.error('Seleccione Tipo de Usuario');
+        document.getElementById("cbx_tipo_user").focus();
+        return false;
+        }
+
+        if($.trim(name) == ""){
+            alertify.error('Escriba su Nombre');
+            document.getElementById("name").focus();
+            return false;
+        }
+
+        if($.trim(lastname) == ""){
+            alertify.error('Escriba su Apellido');
+            document.getElementById("lastname").focus();
+            return false;
+        }
+
+        if($.trim(id_doc) == ""){
+            alertify.error('Escriba su C.I');
+            document.getElementById("id_doc").focus();
+            return false;
+        }
+
+         $.ajax({  
+            type: "POST",  
+            url: "functions/registrar.php",  
+            data: "name="+name+
+                  "&lastname="+lastname+ 
+                  "&id_doc="+id_doc+
+                  "&pre_id_doc="+pre_id_doc+
+                  "&pass="+pass+
+                  "&address="+address+
+                  "&phone="+phone+
+                  "&cod_tel="+cod_tel+
+                  "&email="+email+
+                  "&cbx_parroquia="+cbx_parroquia+
+                  "&cbx_tipo_user="+cbx_tipo_user,  
+            success: function(html){  
+       
+
+            if(html=='email_repetido')  
+            {  
+                alertify.error("El email ya se encuentra en uso por otro usuario"); 
+                document.getElementById("email").focus();
+                exit();
+
+              }else if(html=='doc_repetido'){
+                alertify.error("El Documento de indentidad ya se encuentra en uso por otro usuario");
+                document.getElementById("id_doc").focus();
+                exit();
+   
+              }else if (html=='artista_suscripcion') {
+                 alertify.success("Usuario Registrado Existosamente.");
+                window.open('registrar_suscripcion_artista.php','_self');
+                
+
+              } else if (html=='ente_suscripcion') {
+                alertify.success("Usuario Registrado Existosamente.");
+                window.open('registrar_suscripcion_ente.php','_self');
+                
+
+              }else if(html=='error')
+              {  
+                alertify.error("Error al Registrar"); 
+              } 
+               if($.trim(pass).length <8 ){
+            alertify.error('La contraseña debe ser mayor de 8 caracteres');
+            document.getElementById("pass").focus();
+            return false;
+            }
+            if($.trim(pass) != "" && pass !=repass){
+                alertify.error('Las contraseñas no coinciden');
+                document.getElementById("repass").focus();
+                return false;
+            }
+
+            if($.trim(estado) == ""){
+                alertify.error('Seleccione Estado');
+                document.getElementById("cbx_estado").focus();
+                return false;
+            }
+            if($.trim(municipio) == ""){
+                alertify.error('Seleccione Municipio');
+                document.getElementById("cbx_municipio").focus();
+                return false;
+            }
+
+            if($.trim(cbx_parroquia) == ""){
+                alertify.error('Seleccione Parroquia');
+                document.getElementById("cbx_parroquia").focus();
+                return false;
+            }
+
+            
+             if($.trim(address) == ""){
+                alertify.error('Escriba su Direccion');
+                document.getElementById("address").focus();
+                return false;
+            }
+
+            if($.trim(phone) == ""){
+                alertify.error('Escriba su Numero de Telefono');
+                document.getElementById("phone").focus();
+                return false;
+            }
+
+            if($.trim(email) == ""){
+                alertify.error('Escriba su Correo Electronico');
+                document.getElementById("email").focus();
+                return false;
+            }
+            if(!val_email.test(email)) {
+                alertify.error('El contenido del campo email no es válido.');
+                document.getElementById("email").focus();
+
+                return false
+            }
+
+            }
+        });  
+         return false; 
+
+           
+    });  
 
 
 

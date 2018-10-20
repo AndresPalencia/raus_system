@@ -51,7 +51,7 @@
           }else{
             echo '
             <li>
-               <input type="text" name="user" class="form-control-login" id="user" placeholder="C.I RIF o Num de Registro" required data-msg="Ingrese su numero de usuario"/>
+               <input type="text" name="user" class="form-control-login" id="user" placeholder="C.I o Num de Registro" required data-msg="Ingrese su numero de usuario"/>
            </li>
             <li>
                <input type="password" class="form-control-login" name="password" id="password" placeholder="Contraseña" required data-msg="Ingrese su Contraseña" />
