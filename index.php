@@ -15,26 +15,15 @@ include("includes/estados.php");
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-
-    <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Libraries CSS Files -->
     <link rel="stylesheet" href="css/font.css">
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -48,11 +37,6 @@ include("includes/estados.php");
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
-
-    <!-- Contact Form JavaScript File -->
-
-
-    <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.css">
     <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
@@ -128,7 +112,20 @@ include("header.php");
                 <h3>Conocenos</h3><br>
                 <p>Sistema de registro para artistas urbanos en toda la regi&oacute;n del Distrito Capital</p>
             </header>
-
+            <h4 align="center"><b>USUARIOS</b></h4>
+            <div class="row"><div class="col-md-6" align="justify">
+                <h6 align="center"><p><b>Artista</b></h6> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate, tortor quis faucibus mollis, nisi purus scelerisque sapien, eu dignissim nulla mi quis ex. Phasellus sed ante nunc. Vestibulum pretium elit ut felis tristique, vitae viverra est elementum. Mauris aliquam mauris a eros dapibus molestie. Quisque sollicitudin risus nec sagittis ullamcorper. Nam libero est, vulputate nec tellus nec, tincidunt malesuada nisl. Pellentesque ultrices et dolor quis consequat. Nunc id malesuada dolor. Phasellus consectetur erat varius nunc dictum, eget laoreet elit finibus. Aliquam condimentum neque quis quam aliquet, at dignissim arcu sagittis.</p>
+             </div>
+            
+            <br>
+                <div class="col-md-6" align="justify">
+                <h6 align="center">    <p><b>Ente:</b></h6> 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate, tortor quis faucibus mollis, nisi purus scelerisque sapien, eu dignissim nulla mi quis ex. Phasellus sed ante nunc. Vestibulum pretium elit ut felis tristique, vitae viverra est elementum. Mauris aliquam mauris a eros dapibus molestie. Quisque sollicitudin risus nec sagittis ullamcorper. Nam libero est, vulputate nec tellus nec, tincidunt malesuada nisl. Pellentesque ultrices et dolor quis consequat. Nunc id malesuada dolor. Phasellus consectetur erat varius nunc dictum, eget laoreet elit finibus. Aliquam condimentum neque quis quam aliquet, at dignissim arcu sagittis.</p>
+             </div></div>
+            
+            
+           
             <div class="row about-cols">
 
                 <div class="col-md-4 wow fadeInUp">
@@ -177,6 +174,18 @@ include("header.php");
             </div>
 
         </div>
+            
+    </section><!-- #Conocenos -->
+    <br>
+
+    <section id="social"  class="section-bg" >
+        <br>
+        <div class="container">
+
+            <header class="section-header">
+                <h3 class="section-title">Social Media</h3>
+            </header>
+            <br>
             <div class="container">
             <div class="row">
                 <div class="col-md-6 twitter-content" >
@@ -188,9 +197,11 @@ include("header.php");
                 </div>
             </div>
 
+            </div>
         </div>
-    </section><!-- #Conocenos -->
-    <br><br><br>
+    </section>
+    <br>
+    <br>
 
     <!--==========================
       Noticias Section
@@ -480,11 +491,9 @@ include("header.php");
                     <div class="form-row">
                         <div class="form-group col-md-4">               
                             <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required/>
-                            <div class="required">*</div>
                         </div>
                         <div class="form-group col-md-4">
                             <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Apellido" required/>
-                            <div class="required">*</div>
                         </div>
                         <div class="form-group col-md-1">
                             <select name="pre_id_doc" class="form-control" id="pre_id_doc">
@@ -495,18 +504,15 @@ include("header.php");
                         </div>
                         <div class="form-group col-md-3">
                             <input type="text" class="form-control" name="id_doc" id="id_doc" placeholder="C.I" onkeypress="return validaNumericos(event)"/>
-                            <div class="required">*</div>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <input type="password" name="pass" class="form-control" id="pass" placeholder="Contraseña" required/>
-                            <div class="required">*</div>
                         </div>
                         <div class="form-group col-md-6">
                             <input type="password" name="repass" class="form-control" id="repass" placeholder="Repetir Contraseña" required/>
-                           <div class="required">*</div>
                         </div>
                     </div>
 
@@ -518,28 +524,24 @@ include("header.php");
                                     <option value="<?php echo $row['id_estado']; ?>"><?php echo $row['estado']; ?></option>
                                 <?php } ?>
                             </select>
-                            <div class="required">*</div>
                         </div>
 
                         <div class="form-group col-md-4">
                             <select name="cbx_municipio" id="cbx_municipio" class="form-control" placeholder="Municipio">
                                 <option value="">Seleccionar Municipio</option>
                             </select>
-                            <div class="required">*</div>
                         </div>
 
                         <div class="form-group col-md-4">
                             <select name="cbx_parroquia" id="cbx_parroquia" class="form-control"  placeholder="Parroquia">
                                 <option value="">Seleccionar Parroquia</option>
                             </select>
-                            <div class="required">*</div>
                         </div>
 
                     </div>
 
                     <div class="form-group">
                         <textarea class="form-control" id="address" name="address" rows="5" placeholder="Direcci&oacute;n"></textarea>
-                        <div class="required">*</div>
                     </div>
 
                     <div class="form-row">
@@ -555,12 +557,10 @@ include("header.php");
                         </div>
                         <div class="form-group col-md-5">
                             <input type="phone" name="phone" class="form-control" id="phone" required placeholder=" Telefono 000-00-00"/>
-                            <div class="required">*</div>
                         </div>
 
                         <div class="form-group col-md-6">
                             <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" />
-                            <div class="required">*</div>
                         </div>
                     </div>
 
@@ -670,6 +670,7 @@ include("footer.php");
         cbx_parroquia=$('#cbx_parroquia').val();
         cbx_tipo_user=$('#cbx_tipo_user').val(); 
         val_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+        val_pass = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/
 
         if($.trim(cbx_tipo_user) == ""){
         alertify.error('Seleccione Tipo de Usuario');
@@ -736,12 +737,25 @@ include("footer.php");
               }else if(html=='error')
               {  
                 alertify.error("Error al Registrar"); 
-              } 
-               if($.trim(pass).length <8 ){
+              }
+            if($.trim(pass).length <8 ){
             alertify.error('La contraseña debe ser mayor de 8 caracteres');
             document.getElementById("pass").focus();
             return false;
             }
+            if(!val_pass.test(pass)) {
+                alertify.error('La contraseña debe contener al menos 1 mayuscula, 1 numero y un caracter especial (#$%/@=&).');
+                document.getElementById("pass").focus();
+
+                return false
+            }
+
+            if($.trim(repass).length <1 ){
+            alertify.error('Repita su contraseña');
+            document.getElementById("repass").focus();
+            return false;
+            }           
+
             if($.trim(pass) != "" && pass !=repass){
                 alertify.error('Las contraseñas no coinciden');
                 document.getElementById("repass").focus();

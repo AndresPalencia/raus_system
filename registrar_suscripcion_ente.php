@@ -15,10 +15,6 @@ while($row_artista=mysqli_fetch_array($run_select)){
     $id_artista=$row_artista['id_artistas'];
 }
 
-
-
-
-
 ?>
 
 
@@ -119,7 +115,7 @@ include("header_suscripcion.php");
                 </div>
                 <div >
                     <div >
-                        <h4><strong>Redes Sociales</strong></h4>
+                        <h4><strong>Redes Sociales / Sitio Web</strong></h4>
                     </div>
 
                 </div>

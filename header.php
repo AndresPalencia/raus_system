@@ -18,9 +18,11 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu"> 
           <li><a href="#about">Conocenos</a></li>
+          <li><a href="#social">Social Media</a></li>
           <?php if (!isset($_SESSION['user'])){
             echo '<li><a href="#contact">Registrate</a></li>';
           }?>
+
           
          
            <!--<li><a href="#portfolio">Noticias</a></li>
@@ -44,7 +46,7 @@
           </div></li>-->
           <?php if (isset($_SESSION['user'])){
             echo '
-            <li><a href="misdatos.php"><span class="fa fa-user"></span> '.$_SESSION['numero_unico_registro'].'</a></li>
+            <li><a href="misdatos.php"><span class="fa fa-user"></span> usuario '.$_SESSION['numero_unico_registro'].'</a></li>
             <li><a href="logout.php" class="logout">  <span class="fa fa-sign-out"></span> Cerrar Sesion</a></li>'
             ;
             

@@ -13,7 +13,7 @@
 	// Design initial table header 
 	$data = '<table class="table">
 						<tr>
-							<th>Red Social</th>
+							<th>Red Social / Sitio Web</th>
 							<th>URL</th>
 							<th class="text-right white">
                                 <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#redes_sociales_popup"><i class="fa fa-plus  white" aria-hidden="true"></i> Agregar</a>

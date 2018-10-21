@@ -150,7 +150,7 @@ include("header_suscripcion.php");
                 <br>
                 <div >
                     <div >
-                        <h4><strong>Redes Sociales</strong></h4>
+                        <h4><strong>Redes Sociales / Sitio Web</strong></h4>
                     </div>
 
                 </div>
@@ -172,7 +172,7 @@ include("header_suscripcion.php");
             ?>
 
                 <div>
-                    <input class="text-center btn btn-lg btn-block" type="submit" value="Registrarse" name="suscripcion" >
+                    <input class="text-center btn btn-lg btn-block" type="submit" value="Enviar" name="suscripcion" >
 
                 </div>
 

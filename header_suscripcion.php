@@ -6,7 +6,7 @@
        </div>
     <nav id="nav-menu-container">
         <ul class="nav-menu">
-            <li><a href="misdatos.php"><span class="fa fa-user"></span> <?php echo $_SESSION['numero_unico_registro']; ?></a></li>
+            <li><a href="misdatos.php"><span class="fa fa-user"></span> usuario <?php echo $_SESSION['numero_unico_registro']; ?></a></li>
             <li><a href="logout.php" class="logout">  <span class="fa fa-sign-out"></span> Cerrar Sesion</a></li>
         </ul>
       </nav>
