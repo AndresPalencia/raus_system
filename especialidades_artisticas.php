@@ -1,11 +1,8 @@
 <?php
-
-$select_especialidad="select * from esp_artisticas";
+$select_especialidad="SELECT * FROM esp_artisticas";
 $run_query=mysqli_query($dbcon,$select_especialidad);
 $run_query_update=mysqli_query($dbcon,$select_especialidad);
 ?>
-
-
 <div class="modal fade" id="esp_artisticas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -17,20 +14,17 @@ $run_query_update=mysqli_query($dbcon,$select_especialidad);
             </div>
             <div class="modal-body">
                 <p align="justify">
-
                     <select name="especialidad_artistica" class="form-control" id="especialidad_artistica" placeholder="Especialidad Artistica">
                         <option value="">Especialidad Artistica</option>
                         <?php while($row = $run_query->fetch_assoc()) { ?>
                             <option value="<?php echo $row['id_esp_artistica']; ?>"><?php echo $row['nombre_especialidad_artistica']; ?></option>
                         <?php } ?>
                     </select>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="addRecordEspecialidad()">Aceptar</button>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="addRecordEspecialidad()">Aceptar</button>
+                </div>
                 </p>
             </div>
-
         </div>
     </div>
 </div>
@@ -46,20 +40,17 @@ $run_query_update=mysqli_query($dbcon,$select_especialidad);
             </div>
             <div class="modal-body">
                 <p align="justify">
-
                     <select name="update_especialidad_artistica" class="form-control" id="update_especialidad_artistica" placeholder="Especialidad Artistica">
                         <option value="">Especialidad Artistica</option>
                         <?php while($row_update = $run_query_update->fetch_assoc()) { ?>
                             <option value="<?php echo $row_update['id_esp_artistica']; ?>"><?php echo $row_update['nombre_especialidad_artistica']; ?></option>
                         <?php } ?>
                     </select>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="UpdateEspecialidadDetails()">Aceptar</button> <input type="hidden" id="hidden_user_id_esp">
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="UpdateEspecialidadDetails()">Aceptar</button> <input type="hidden" id="hidden_user_id_esp">
+                </div>
                 </p>
             </div>
-
         </div>
     </div>
 </div>

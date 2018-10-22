@@ -9,30 +9,27 @@
             </div>
             <div class="modal-body">
                 <p align="justify">
-             
-                    <div class="form-row">
-                        <input type="text" name="grupo" class="form-control" id="grupo" placeholder="Grupo"/>
-                    </div>
-                    <br>
-                    <div class="form-row">
-                        <input type="text" name="duracion_agru" class="form-control" id="duracion_agru" placeholder="Duraci&oacute;n" />
-                    </div>
-                    <br>
-                    <div class="form-row">
-                        <input type="text" name="anio_agru" class="form-control" id="anio_agru" placeholder="Año" />
-                    </div>
-                    <br>
-                    <div class="form-row">
-                        <input type="text" name="lugar" class="form-control" id="lugar" placeholder="Lugar"/>
-                    </div>
-                    <br>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="addRecordAgrupacion()">Aceptar</button>
-                    </div>
-
+                <div class="form-row">
+                    <input type="text" name="grupo" class="form-control" id="grupo" placeholder="Grupo"/>
+                </div>
+                <br>
+                <div class="form-row">
+                    <input type="text" name="duracion_agru" class="form-control" id="duracion_agru" placeholder="Duraci&oacute;n" />
+                </div>
+                <br>
+                <div class="form-row">
+                    <input type="text" name="anio_agru" class="form-control" id="anio_agru" placeholder="Año" />
+                </div>
+                <br>
+                <div class="form-row">
+                    <input type="text" name="lugar" class="form-control" id="lugar" placeholder="Lugar"/>
+                </div>
+                <br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="addRecordAgrupacion()">Aceptar</button>
+                </div>
                 </p>
             </div>
-
         </div>
     </div>
 </div>
@@ -69,12 +66,9 @@
                         <button type="button" class="btn btn-secondary" onclick="UpdateAgrupacionDetails()">Aceptar</button>
                         <input type="hidden" id="hidden_user_id_agru">
                     </div>
-
                 </form>
-                    
                 </p>
             </div>
-
         </div>
     </div>
 </div>

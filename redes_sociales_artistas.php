@@ -1,6 +1,5 @@
 <?php
-
-$select_redes_sociales="select * from redes_sociales";
+$select_redes_sociales="SELECT * FROM redes_sociales";
 $run_query=mysqli_query($dbcon,$select_redes_sociales);
 $run_query_update=mysqli_query($dbcon,$select_redes_sociales);
 ?>
@@ -17,26 +16,23 @@ $run_query_update=mysqli_query($dbcon,$select_redes_sociales);
             </div>
             <div class="modal-body">
                 <p align="justify">
-
-                   <div>
-                       <select name="redes_sociales" class="form-control" id="redes_sociales" placeholder="Redes Sociales" >
-                           <option value="0" active>--- Redes Sociales ---</option>
-                           <?php while($row = $run_query->fetch_assoc()) { ?>
-                               <option value="<?php echo $row['id_redes_sociales']; ?>"><?php echo $row['red_social']; ?></option>
-                           <?php } ?>
-                       </select>
-                   </div>
-                    <br>
-                    <div class="form-row">
-                        <textarea rows="5" name="url" class="form-control" id="url" placeholder="URL"/></textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="addRecordRed()">Aceptar</button>
-                    </div>
-
+                <div>
+                    <select name="redes_sociales" class="form-control" id="redes_sociales" placeholder="Redes Sociales" >
+                        <option value="0" active>--- Redes Sociales ---</option>
+                        <?php while($row = $run_query->fetch_assoc()) { ?>
+                            <option value="<?php echo $row['id_redes_sociales']; ?>"><?php echo $row['red_social']; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <br>
+                <div class="form-row">
+                    <textarea rows="5" name="url" class="form-control" id="url" placeholder="URL"/></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="addRecordRed()">Aceptar</button>
+                </div>
                 </p>
             </div>
-
         </div>
     </div>
 </div>
@@ -52,26 +48,24 @@ $run_query_update=mysqli_query($dbcon,$select_redes_sociales);
             </div>
             <div class="modal-body">
                 <p align="justify">
-                  <form>
+                <form>
                     <div>
-                       <select name="update_redes_sociales" class="form-control" id="update_redes_sociales" placeholder="Redes Sociales">
-                           <option value="0" active>--- Redes Sociales ---</option>
-                           <?php while($row_update = $run_query_update->fetch_assoc()) { ?>
-                               <option value="<?php echo $row_update['id_redes_sociales']; ?>"><?php echo $row_update['red_social']; ?></option>
-                           <?php } ?>
-                       </select>
-                   </div>
+                        <select name="update_redes_sociales" class="form-control" id="update_redes_sociales" placeholder="Redes Sociales">
+                            <option value="0" active>--- Redes Sociales ---</option>
+                            <?php while($row_update = $run_query_update->fetch_assoc()) { ?>
+                                <option value="<?php echo $row_update['id_redes_sociales']; ?>"><?php echo $row_update['red_social']; ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
                     <br>
                     <div class="form-row">
                         <textarea rows="5" name="update_url" class="form-control" id="update_url" placeholder="URL"/></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="UpdateRedDetails()">Aceptar</button> 
+                        <button type="button" class="btn btn-secondary" onclick="UpdateRedDetails()">Aceptar</button>
                         <input type="hidden" id="hidden_user_id_red">
                     </div>
-
-                  </form>
-                   
+                </form>
                 </p>
             </div>
 

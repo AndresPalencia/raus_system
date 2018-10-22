@@ -1,15 +1,9 @@
 <?php
-// include Database connection file
 include("../../database/db_conection.php");
-
-// check request
 if(isset($_POST['id_titulo']) && isset($_POST['id_titulo']) != "")
 {
-    // get User ID
     $titulo_id = $_POST['id_titulo'];
-
-    // Get User Details
-    $query = "SELECT * FROM artistas_titulos_obtenidos where id_titulos_obtenidos = '$titulo_id'";
+    $query = "SELECT * FROM artistas_titulos_obtenidos WHERE id_titulos_obtenidos = '$titulo_id'";
 
     if (!$result = mysqli_query($dbcon, $query)) {
         exit(mysqli_error($dbcon));
@@ -25,7 +19,6 @@ if(isset($_POST['id_titulo']) && isset($_POST['id_titulo']) != "")
         $response['status'] = 200;
         $response['message'] = "Data not found!";
     }
-    // display JSON data
     echo json_encode($response);
 }
 else

@@ -1,15 +1,9 @@
 <?php
-// include Database connection file
 include("../../database/db_conection.php");
-
-// check request
 if(isset($_POST['id_red']) && isset($_POST['id_red']) != "")
 {
-    // get User ID
     $red_id = $_POST['id_red'];
-
-    // Get User Details
-    $query = "SELECT * FROM entes_redes_sociales where identes_redes_sociales = '$red_id'";
+    $query = "SELECT * FROM entes_redes_sociales WHERE identes_redes_sociales = '$red_id'";
 
     if (!$result = mysqli_query($dbcon, $query)) {
         exit(mysqli_error($dbcon));
@@ -25,7 +19,6 @@ if(isset($_POST['id_red']) && isset($_POST['id_red']) != "")
         $response['status'] = 200;
         $response['message'] = "Data not found!";
     }
-    // display JSON data
     echo json_encode($response);
 }
 else
