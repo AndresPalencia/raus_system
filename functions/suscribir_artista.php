@@ -2,14 +2,20 @@
 include("../database/db_conection.php");
 if(isset($_POST['suscripcion'])) {
     session_start();
+    $aka = $_POST['aka'];
     $resumen = $_POST['resumen'];
-    $contrato = $_POST['contrato'];
     $user_artista = $_SESSION['id'];
+    if ($_SESSION['licencia'] == "1"){
+        $contrato="1";
+    }else{
+        $contrato = $_POST['contrato'];
+    }
+    
 
     $updateUser="UPDATE usuarios SET licencia_contrato ='$contrato' where id_usuario='$user_artista'";
     $run_update_user=mysqli_query($dbcon,$updateUser) or die($updateUser);
 
-    $updateArtista="UPDATE artistas_urbanos SET resumen_artistico='$resumen' where usuarios_id_usuario='$user_artista'";
+    $updateArtista="UPDATE artistas_urbanos SET aka='$aka', resumen_artistico='$resumen' where usuarios_id_usuario='$user_artista'";
     $run_update_artista=mysqli_query($dbcon,$updateArtista) or die($updateArtista);
 
     if ($run_update_artista && $run_update_user){

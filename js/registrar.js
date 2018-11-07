@@ -1,4 +1,5 @@
 $("#phone").inputmask({"mask": "999-9999"});
+
 $(document).ready(function(){
     $("#cbx_estado").change(function () {
         $('#cbx_parroquia').find('option').remove().end().append('<option value="whatever"></option>').val('whatever');
@@ -33,11 +34,11 @@ $("#login").click(function(){
             {
                 window.open('registrar_suscripcion_ente.php','_self');
             }else if(html=='ente'){
-                window.open('raus.php','_self');
+                window.open('gestion_ente.php','_self');
             }else if (html=='artista_suscripcion') {
                 window.open('registrar_suscripcion_artista.php','_self');
             } else if (html=='artista') {
-                window.open('raus.php','_self');
+                window.open('gestion_artista.php','_self');
             }else
             {
                 alertify.error("Alguno de sus datos son incorrectos.");
@@ -111,6 +112,10 @@ $("#registro_btn").click(function(){
                 alertify.error("El email ya se encuentra en uso por otro usuario");
                 document.getElementById("email").focus();
                 exit();
+            }if(html=='phone_repetido'){
+                alertify.error("El numero ya se encuentra en uso por otro usuario");
+                document.getElementById("phone").focus();
+                exit();
             }else if(html=='doc_repetido'){
                 alertify.error("El Documento de indentidad ya se encuentra en uso por otro usuario");
                 document.getElementById("id_doc").focus();
@@ -132,7 +137,7 @@ $("#registro_btn").click(function(){
                 return false;
             }
             if(!val_pass.test(pass)) {
-                alertify.error('La contraseña debe contener al menos 1 mayuscula, 1 numero y un caracter especial (#$%/@=&).');
+                alertify.error('Minimo Una Letra Mayuscula, Un Numero, Un Caracter Especial (#$%/@=&)');
                 document.getElementById("pass").focus();
                 return false
             }
@@ -186,3 +191,9 @@ $("#registro_btn").click(function(){
     });
     return false;
 });
+function validaNumericos(event) {
+    if(event.charCode >= 48 && event.charCode <= 57){
+        return true;
+    }
+    return false;
+}

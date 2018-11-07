@@ -22,9 +22,16 @@ if(mysqli_num_rows($run_query_doc)>0)
     echo "doc_repetido";
     exit();
 }
+$check_phone_query="SELECT * FROM usuarios WHERE telefono='$user_phone'";
+$run_query_phone=mysqli_query($dbcon,$check_phone_query);
+
+if(mysqli_num_rows($run_query_phone)>0)
+{
+    echo "phone_repetido";
+    exit();
+}
 $check_email_query="SELECT * FROM usuarios WHERE correo='$user_email'";
 $run_query_email=mysqli_query($dbcon,$check_email_query);
-
 
 if(mysqli_num_rows($run_query_email)>0)
 {
@@ -40,7 +47,6 @@ if($_POST['name']!=='' && $user_lastname!=='' && $user_id_doc!=='' && $user_pass
     $resultado=mysqli_query($dbcon,$insert_user) or die ($insert_user); //$insert_user
     $user_id_insert=mysqli_insert_id($dbcon);
 
-    // die($user_tipo);
     if($resultado){
         if ($user_tipo=="2"){
             $resumen_artistico="";
@@ -52,7 +58,9 @@ if($_POST['name']!=='' && $user_lastname!=='' && $user_id_doc!=='' && $user_pass
             $_SESSION['id']=$user_id_insert;
             $update_art="UPDATE usuarios SET numero_unico_registro='$user_numero_registro' WHERE id_usuario='$user_id_insert'";
             $run_query=mysqli_query($dbcon,$update_art) or die ($update_art);
+            $_SESSION['tipo_usuario']="2";
             $_SESSION['numero_unico_registro']=$user_numero_registro;
+            $_SESSION['licencia']="0";
             echo "artista_suscripcion";
         }
         else if ($user_tipo=="1"){
@@ -63,16 +71,13 @@ if($_POST['name']!=='' && $user_lastname!=='' && $user_id_doc!=='' && $user_pass
             $_SESSION['id']=$user_id_insert;
             $update_ent="UPDATE usuarios SET numero_unico_registro='$user_numero_registro' WHERE id_usuario='$user_id_insert'";
             $run_query_ent=mysqli_query($dbcon,$update_ent) or die ($update_ent);
+            $_SESSION['tipo_usuario']="1";
             $_SESSION['numero_unico_registro']=$user_numero_registro;
+            $_SESSION['licencia']="0";
             echo "ente_suscripcion";
         }
     }else{
         echo "error";
     }
 }
-
-
-
-
-
 ?>

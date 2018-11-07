@@ -26,8 +26,10 @@ if(mysqli_num_rows($run))
                     $nombre_ente=$row_ente['nombre_ente'];
                     if ($nombre_ente=="") {
                         echo "ente_suscripcion";
+                        $_SESSION['licencia'] = 0;
                     }else{
                         echo "ente";
+                        $_SESSION['licencia'] = 1;
                     }
                 }
             }
@@ -39,8 +41,10 @@ if(mysqli_num_rows($run))
                     $resumen=$row_artista['resumen_artistico'];
                     if ($resumen=="") {
                         echo "artista_suscripcion";
+                        $_SESSION['licencia'] = 0;
                     }else{
                         echo "artista";
+                        $_SESSION['licencia'] = 1;
                     }
                 }
             }

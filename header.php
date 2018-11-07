@@ -11,8 +11,8 @@
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="#about">Conocenos</a></li>
-                    <li><a href="#social">Social Media</a></li>
+                    <li><a href="#about">Con&oacute;cenos</a></li>
+                    <li><a href="#social">S&iacute;guenos</a></li>
                     <?php if (!isset($_SESSION['user'])){
                         echo '<li><a href="#contact">Registrate</a></li>';
                     }?>
@@ -25,8 +25,38 @@
                        </ul>
                      </li>-->
                     <?php if (isset($_SESSION['user'])){
+                        echo '<li class="menu-has-children"><a href="#" style="color: white">Servicios</a>
+                        <ul>
+                        <li><a href="';
+                        if($_SESSION['tipo_usuario']=='1'){
+                            echo ('gestion_ente.php');
+                        }else{
+                            echo ('gestion_artista.php');
+                        }
+                        
+                        echo '">PAUTAS</a></li>
+                      <li><a href="';
+                        if($_SESSION['tipo_usuario']=='1'){
+                            echo ('consulta_ente.php');
+                        }else{
+                            echo ('consulta_artista.php');
+                        }
+                        
+                        echo '">GESTI&Oacute;N</a></li>
+                    </ul>
+                </li>';
+
                         echo '
-                        <li><a href="misdatos.php"><span class="fa fa-user"></span> usuario '.$_SESSION['numero_unico_registro'].'</a></li>
+                        <li><a href="';
+                         if($_SESSION['tipo_usuario']=='1'){
+                            echo ('registrar_suscripcion_ente.php');
+                        }else{
+                            echo ('registrar_suscripcion_artista.php');
+                        }
+
+                        echo '"><span class="fa fa-user"></span> usuario '.$_SESSION['numero_unico_registro'].'</a>
+
+                        </li>
                         <li><a href="logout.php" class="logout">  <span class="fa fa-sign-out"></span> Cerrar Sesion</a></li>'
                         ;
                     }else{

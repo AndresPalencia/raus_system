@@ -16,11 +16,11 @@
                 </div>
                 <br>
                 <div class="form-row">
-                    <input type="text" name="institucion" class="form-control" id="institucion" placeholder="Instituci&oacute;n"  />
+                    <input type="text" name="institucion" class="form-control" id="institucion" placeholder="Institucion"  />
                 </div>
                 <br>
                 <div class="form-row">
-                    <input type="text" name="duracion" class="form-control" id="duracion" placeholder="Duraci&oacute;n"  />
+                    <input type="text" name="duracion" class="form-control" id="duracion" placeholder="Duracion"  />
                 </div>
                 <br>
                 <div class="form-row">
@@ -50,11 +50,11 @@
                 </div>
                 <br>
                 <div class="form-row">
-                    <input type="text" name="update_institucion" class="form-control" id="update_institucion" placeholder="Instituci&oacute;n" />
+                    <input type="text" name="update_institucion" class="form-control" id="update_institucion" placeholder="Institucion" />
                 </div>
                 <br>
                 <div class="form-row">
-                    <input type="text" name="update_duracion" class="form-control" id="update_duracion" placeholder="Duraci&oacute;n" />
+                    <input type="text" name="update_duracion" class="form-control" id="update_duracion" placeholder="Duracion" />
                 </div>
                 <br>
                 <div class="form-row">

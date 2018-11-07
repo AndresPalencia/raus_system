@@ -7,7 +7,6 @@ include("includes/estados.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <title>RAUSystem</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -41,6 +40,12 @@ include("includes/estados.php");
     <script src="js/alertify/alertify.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
+     </script>
 </head>
 
 <body>
@@ -69,6 +74,9 @@ include("header.php");
                 <div class="carousel-item">
                     <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
                 </div>
+                <div class="carousel-item">
+                    <div class="carousel-background"><img src="img/intro-carousel/4.jpg" alt=""></div>
+                </div>
             </div>
             <div class="carousel-container">
                 <div class="carousel-content col-md-6">
@@ -87,63 +95,65 @@ include("header.php");
     <section id="about">
         <div class="container">
             <header class="section-header">
-                <h3>Conocenos</h3><br>
-                <p>Sistema de registro para artistas urbanos en toda la regi&oacute;n del Distrito Capital</p>
-            </header>
-            <h4 align="center"><b>USUARIOS</b></h4>
-            <div class="row">
-                <div class="col-md-6" align="justify">
-                    <h6 align="center"><p><b>Artista</b></h6>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate, tortor quis faucibus mollis, nisi purus scelerisque sapien, eu dignissim nulla mi quis ex. Phasellus sed ante nunc. Vestibulum pretium elit ut felis tristique, vitae viverra est elementum. Mauris aliquam mauris a eros dapibus molestie. Quisque sollicitudin risus nec sagittis ullamcorper. Nam libero est, vulputate nec tellus nec, tincidunt malesuada nisl. Pellentesque ultrices et dolor quis consequat. Nunc id malesuada dolor. Phasellus consectetur erat varius nunc dictum, eget laoreet elit finibus. Aliquam condimentum neque quis quam aliquet, at dignissim arcu sagittis.</p>
-                </div>
-
-                <br>
-                <div class="col-md-6" align="justify">
-                    <h6 align="center"><p><b>Ente:</b></h6>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vulputate, tortor quis faucibus mollis, nisi purus scelerisque sapien, eu dignissim nulla mi quis ex. Phasellus sed ante nunc. Vestibulum pretium elit ut felis tristique, vitae viverra est elementum. Mauris aliquam mauris a eros dapibus molestie. Quisque sollicitudin risus nec sagittis ullamcorper. Nam libero est, vulputate nec tellus nec, tincidunt malesuada nisl. Pellentesque ultrices et dolor quis consequat. Nunc id malesuada dolor. Phasellus consectetur erat varius nunc dictum, eget laoreet elit finibus. Aliquam condimentum neque quis quam aliquet, at dignissim arcu sagittis.</p>
-                </div>
-            </div>
+                <h3>Conocenos</h3>
+                <br><br>
+                <h5 align="center"><b style="color:#00c5cd";>Sistema Web para el Registro de Artistas Urbanos</b></h5> 
+                <p>Es un instrumento tecnol&oacute;gico ante la inclusión social y que sirve como apoyo para impulsar la activaci&oacute;n cultural juvenil y la consolidaci&oacute;n de talentos locales organizados en todo el territorio del Distrito Capital de la Rep&uacute;blica Bolivariana de Venezuela</p>
+            </header><br>
             <div class="row about-cols">
-
-                <div class="col-md-4 wow fadeInUp">
+                <div class="col-md-4">
                     <div class="about-col">
                         <div class="img">
                             <img src="img/mission.jpg" alt="" class="img-fluid">
                         </div>
-                        <h2 class="title"><a href="#">Misi&oacute;n</a></h2>
-                        <p align="justify">
-                            Establecer a traves de este instrumento tecnol&oacute;gico y de patrocinio un espacio que permita la inclusi&oacute;n social de todos los jovenes artistas y nuevos talentos de la cultura urbana a nivel regional
-                        </p>
+                        <h2 class="title"><a>Misi&oacute;n</a></h2><br>
+                        <h1><p align="justify">
+                            Establecer como patrocinio un espacio que permita la inclusi&oacute;n social de todos los jovenes artistas y nuevos talentos de la cultura urbana a nivel regional
+                        </h1></p>
                     </div>
                 </div>
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-md-4">
                     <div class="about-col">
                         <div class="img">
                             <img src="img/plan.jpg" alt="" class="img-fluid">
                         </div>
-                        <h2 class="title"><a href="#">Objetivos</a></h2>
+                        <br><h2 class="title"><a>Objetivos</a></h2>
                         <p>
                         <ul>
-                            <li>Postular jovenes artistas y nuevos talentos de la cultura urbana a nivel regional</li>
-                            <li>Promover jovenes artistas y nuevos talentos de la cultura urbana a nivel regional</li>
-                            <li>Producir jovenes artistas y nuevos talentos de la cultura urbana a nivel regional</li>
+                            <li>Postular jovenes artistas y nuevos talentos locales</li>
+                            <li>Promover jovenes artistas y nuevos talentos locales</li>
+                            <li>Producir jovenes artistas y nuevos talentos locales</li>
                         </ul>
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-md-4">
                     <div class="about-col">
                         <div class="img">
                             <img src="img/vision.jpg" alt="" class="img-fluid">
                             <!--<div class="icon"><i class="ion-ios-eye-outline"></i></div>-->
                         </div>
-                        <h2 class="title"><a href="#">Visi&oacute;n</a></h2>
-                        <p align="justify">
-                            Consolidar este instrumentos tecnol&oacute;gico y de patrocinio como una organizaci&oacute;n social en apoyo a todos los jovenes artistas y nuevos talentos de la cultura urbana a nivel regional
-                        </p>
+                        <h2 class="title"><a>Visi&oacute;n</a></h2><br>
+                        <h1><p align="justify">
+                            Consolidar el patrocinio de este espacio como una organizaci&oacute;n en apoyo a todos los jovenes artistas y nuevos talentos de la cultura urbana a nivel regional
+                        </h1></p>
                     </div>
                 </div>
             </div>
+            <br><br>
+            <div>
+            <h4 align="center"><b style="color:#000000";>USUARIOS</b></h4><br>
+                <div class="row">
+                    <div class="col-md-6" align="justify">
+                        <h6 align="center"><b style="color:#00c5cd";>Artistas Urbanos</b></h6>
+                        <p align="center">Son quienes estan capacitados para brindar servicios de participaci&oacute;n artistica y asi poder cubrir un interes de patrocinio que es presentado por la intervenci&oacute;n de algun ente cultural</p>
+                    </div>
+                    <div class="col-md-6" align="justify">
+                        <h6 align="center"><b style="color:#00c5cd";>Entes Culturales</b></h6>
+                        <p align="center">Son quienes estan capacitados para brindar servicios de intervenci&oacute;n cultural y asi poder cubrir una necesidad de patrocinio que es presentada por la participaci&oacute;n de algun artista urbano</p>
+                    </div>
+                </div>
+            </div>    
         </div>
     </section>
     <br>
@@ -151,7 +161,7 @@ include("header.php");
         <br>
         <div class="container">
             <header class="section-header">
-                <h3 class="section-title">Social Media</h3>
+                <h3 class="section-title">Siguenos</h3>
             </header>
             <br>
             <div class="container">
@@ -176,7 +186,7 @@ include("header.php");
         <section id="contact" class="">
             <div class="container">
                 <div id="errormessage"></div>
-                <form action="functions/registrar.php" id="registro" name="registro" method="post" novalidate onsubmit="return validaCampos();">
+                <form action="functions/registrar.php" id="registro" name="registro" id="registro" method="post" novalidate onsubmit="return validaCampos();">
 
                     <div class="section-header">
                         <h3>Registro</h3>
@@ -188,8 +198,8 @@ include("header.php");
                             <center><div class="form col-md-4">
                                     <select class="form-control" name="cbx_tipo_user" class="form-control" id="cbx_tipo_user" placeholder="Tipo de usuario" required data-msg="Seleccione tipo de usuario">
                                         <option value="">Seleccionar Opci&oacute;n</option><div class="required">*</div>
-                                        <option value="1" data-toggle="tooltip" data-placement="bottom" title="Ente">Soy Ente Cultural</option>
-                                        <option value="2" data-toggle="tooltip" data-placement="bottom" title="Artista">Soy Artista Urbano</option>
+                                        <option value="1" data-toggle="tooltip" data-placement="bottom" title="Conocenos">Soy Ente Cultural</option>
+                                        <option value="2" data-toggle="tooltip" data-placement="bottom" title="Conocenos">Soy Artista Urbano</option>
                                     </select>
                                 </div>
                             </center>
@@ -249,7 +259,7 @@ include("header.php");
                     <div class="form-row">
                         <div class="form-group col-md-1">
                             <select name="cod_tel" class="form-control" id="cod_tel">
-                                <option value="0212">0412</option>
+                                <option value="0212">0212</option>
                                 <option value="0414">0414</option>
                                 <option value="0424">0424</option>
                                 <option value="0416">0416</option>
@@ -264,8 +274,17 @@ include("header.php");
                             <input type="email" class="form-control" name="email" id="email" placeholder="Correo" data-rule="email" />
                         </div>
                     </div>
+                    
                     <div>
-                        <input class="text-center btn btn-lg btn-block" type="submit" id="registro_btn" value="Registrarse" name="registro" >
+                        <input 
+                            class="text-center btn btn-lg btn-block g-recaptcha" 
+                             
+                            data-sitekey="6LdJYXkUAAAAAN7nEXYw3OneFG_rZ3aaaDBaATX4" 
+                            data-callback='onSubmit'
+                           
+                            type="submit" 
+                            id="registro_btn" 
+                            value="Registrarse" name="registro" >
                     </div>
                 </form>
             </div>

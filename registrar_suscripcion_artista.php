@@ -8,6 +8,8 @@ $select_artista="SELECT *FROM artistas_urbanos where usuarios_id_usuario='$id_us
 $run_select=mysqli_query($dbcon,$select_artista);
 while($row_artista=mysqli_fetch_array($run_select)){
     $id_artista=$row_artista['id_artistas'];
+    $aka=$row_artista['aka'];
+    $resumen=$row_artista['resumen_artistico'];
 }
 ?>
 
@@ -47,6 +49,7 @@ while($row_artista=mysqli_fetch_array($run_select)){
     <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.css">
     <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
     <script src="js/alertify/alertify.js"></script>
+    
 </head>
 <body>
 <?php
@@ -62,22 +65,36 @@ include("header_suscripcion.php");
 
 <section id="call-to-action" class="wow fadeIn">
 </section>
+
 <div class="form">
-    <section>
         <div class="container">
             <br>
             <br>
             <div class="section-header">
-                <h3>Suscripci&oacute;n</h3>
-            </div>
+                <h3>
+                    <?php if ($_SESSION['licencia'] == 0){
+                        echo "Suscripci&oacute;n";
+                    }else{
+                        echo "Usuario ".$_SESSION['numero_unico_registro'];
+                    } 
+                    ?>
+                </h3>
+            </div><div class="required">* Todos los campos son obligatorios</div>
             <form action="functions/suscribir_artista.php" id="suscripcion" name="suscripcion" method="post" >
                 <br>
                 <br>
                 <div>
-                    <h4><strong>Resumen Artistico</strong></h4>
+                    <h4><strong>A.K.A</strong></h4>
+                </div>                
+                    <div class="form-group col-md-6">
+                        <input type="text" name="aka" class="form-control" id="aka" value="<?php echo $aka;?>" placeholder="ALIAS" required />
+                    </div>
+                <br>
+                <div>
+                    <h4><strong>Resumen Art&iacute;stico</strong></h4>
                 </div>
-                <div class="form-group">
-                    <textarea class="form-control" name="resumen" id="resumen" rows="7" required></textarea>
+                <div class="form-group col-md-12">
+                    <textarea class="form-control" name="resumen" id="resumen" rows="7"  required><?php echo $resumen;?></textarea>
                     <div class="validation"></div>
                 </div>
                 <br>
@@ -89,14 +106,14 @@ include("header_suscripcion.php");
                     <br>
                     <div>
                         <div>
-                            <h4><strong>Titulos Obtenidos</strong></h4>
+                            <h4><strong>T&iacute;tulos Obtenidos</strong></h4>
                         </div>
                     </div>
                     <div class="titulos_obtenidos_content"></div>
                     <br>
                     <div>
                         <div>
-                            <h4><strong>Participaci&oacute;n en Agrupaciones</strong></h4>
+                            <h4><strong>Participacion en Agrupaciones</strong></h4>
                         </div>
                     </div>
                     <div class="agrupaciones_content"></div>
@@ -115,12 +132,20 @@ include("header_suscripcion.php");
                         </div>
                     </div>
                     <div class="redes_content"></div>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <input type="checkbox" name="contrato" value="1" required> Aceptar
-                            <a href="" data-toggle="modal" data-target="#exampleModal">Contrato</a><br>
-                        </div>
-                    </div>
+                    
+                     <?php if ($_SESSION['licencia'] == 0){
+                        echo '
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <input type="checkbox" name="contrato" value="1" required> Aceptar
+                                    <a href="" data-toggle="modal" data-target="#exampleModal">Contrato</a><br>
+                                </div>
+                            </div>';
+                    }
+                    ?>
+                    
+
+
                     <?php
                     include ("estudios_realizados.php");
                     include ("titulos_obtenidos.php");
@@ -129,7 +154,7 @@ include("header_suscripcion.php");
                     include ("redes_sociales_artistas.php");
                     ?>
                     <div>
-                        <input class="text-center btn btn-lg btn-block" type="submit" value="Enviar" name="suscripcion" >
+                        <input class="text-center btn btn-lg btn-block" type="submit" value="Guardar" name="suscripcion" >
                     </div>
             </form >
             <?php
@@ -138,6 +163,7 @@ include("header_suscripcion.php");
         </div>
 </div>
 </section>
+
 <br>
 <br>
 </main>

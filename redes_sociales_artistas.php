@@ -18,7 +18,7 @@ $run_query_update=mysqli_query($dbcon,$select_redes_sociales);
                 <p align="justify">
                 <div>
                     <select name="redes_sociales" class="form-control" id="redes_sociales" placeholder="Redes Sociales" >
-                        <option value="0" active>--- Redes Sociales ---</option>
+                        <option value="0" active>Seleccione</option>
                         <?php while($row = $run_query->fetch_assoc()) { ?>
                             <option value="<?php echo $row['id_redes_sociales']; ?>"><?php echo $row['red_social']; ?></option>
                         <?php } ?>
@@ -51,7 +51,7 @@ $run_query_update=mysqli_query($dbcon,$select_redes_sociales);
                 <form>
                     <div>
                         <select name="update_redes_sociales" class="form-control" id="update_redes_sociales" placeholder="Redes Sociales">
-                            <option value="0" active>--- Redes Sociales ---</option>
+                            <option value="0" active>Seleccione</option>
                             <?php while($row_update = $run_query_update->fetch_assoc()) { ?>
                                 <option value="<?php echo $row_update['id_redes_sociales']; ?>"><?php echo $row_update['red_social']; ?></option>
                             <?php } ?>

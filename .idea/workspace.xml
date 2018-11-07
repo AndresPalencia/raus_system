@@ -1,63 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="542d2bbe-2086-4949-af4f-075aaf10b725" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agrupaciones.php" beforeDir="false" afterPath="$PROJECT_DIR$/agrupaciones.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/agrupaciones_artista/addRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/agrupaciones_artista/addRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/agrupaciones_artista/deleteAgrupacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/agrupaciones_artista/deleteAgrupacion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/agrupaciones_artista/readAgrupacionDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/agrupaciones_artista/readAgrupacionDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/agrupaciones_artista/readRecords.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/agrupaciones_artista/readRecords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/agrupaciones_artista/updateAgrupacionDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/agrupaciones_artista/updateAgrupacionDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/especialidades_artista/addRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/especialidades_artista/addRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/especialidades_artista/deleteEspecialidad.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/especialidades_artista/deleteEspecialidad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/especialidades_artista/readEspecialidadDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/especialidades_artista/readEspecialidadDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/especialidades_artista/readRecords.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/especialidades_artista/readRecords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/especialidades_artista/updateEspecialidadDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/especialidades_artista/updateEspecialidadDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/estudios_artista/addRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/estudios_artista/addRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/estudios_artista/deleteEstudio.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/estudios_artista/deleteEstudio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/estudios_artista/readEstudioDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/estudios_artista/readEstudioDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/estudios_artista/readRecords.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/estudios_artista/readRecords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/estudios_artista/updateEstudioDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/estudios_artista/updateEstudioDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_artista/addRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_artista/addRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_artista/deleteRed.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_artista/deleteRed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_artista/readRecords.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_artista/readRecords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_artista/readRedDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_artista/readRedDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_artista/updateRedDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_artista/updateRedDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_ente/addRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_ente/addRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_ente/deleteRed.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_ente/deleteRed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_ente/readRecords.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_ente/readRecords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_ente/readRedDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_ente/readRedDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/redes_ente/updateRedDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/redes_ente/updateRedDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/titulos_artista/addRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/titulos_artista/addRecord.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/titulos_artista/deleteTitulo.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/titulos_artista/deleteTitulo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/titulos_artista/readRecords.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/titulos_artista/readRecords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/titulos_artista/readTituloDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/titulos_artista/readTituloDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/titulos_artista/updateTituloDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/titulos_artista/updateTituloDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contrato.php" beforeDir="false" afterPath="$PROJECT_DIR$/contrato.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/especialidades_artisticas.php" beforeDir="false" afterPath="$PROJECT_DIR$/especialidades_artisticas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/estudios_realizados.php" beforeDir="false" afterPath="$PROJECT_DIR$/estudios_realizados.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/registrar.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/registrar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/suscribir_artista.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/suscribir_artista.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/suscribir_ente.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions/suscribir_ente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header_suscripcion.php" beforeDir="false" afterPath="$PROJECT_DIR$/header_suscripcion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/estados.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/estados.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/municipios.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/municipios.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/parroquias.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/parroquias.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/registrar.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/registrar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raus.php" beforeDir="false" afterPath="$PROJECT_DIR$/raus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redes_sociales_artistas.php" beforeDir="false" afterPath="$PROJECT_DIR$/redes_sociales_artistas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redes_sociales_entes.php" beforeDir="false" afterPath="$PROJECT_DIR$/redes_sociales_entes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrar_suscripcion_artista.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrar_suscripcion_artista.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registrar_suscripcion_ente.php" beforeDir="false" afterPath="$PROJECT_DIR$/registrar_suscripcion_ente.php" afterDir="false" />
-    </list>
+    <list default="true" id="542d2bbe-2086-4949-af4f-075aaf10b725" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +12,7 @@
     <session id="739447655">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -354,16 +299,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540165829807</updated>
-      <workItem from="1540165844221" duration="8808000" />
+      <workItem from="1540165844221" duration="9408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8808000" />
+    <option name="totallyTimeSpent" value="9408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />

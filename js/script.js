@@ -24,7 +24,7 @@ function readRecords() {
 // Añadir record Estudio
 function addRecordEstudio() {
 
-    // obtiene valores del formulario de estudios realizados
+    // Obtiene valores del formulario de estudios realizados
     var estudio = $("#estudio").val();
     var institucion = $("#institucion").val();
     var duracion = $("#duracion").val();
@@ -39,10 +39,10 @@ function addRecordEstudio() {
             duracion: duracion,
             anio: anio
         }, function (data, status) {
-            // cierra el popup
+            // Cierra el popup
             $("#estudios_realizados").modal("hide");
 
-            // carga informacion en la tabla otra vez
+            // Carga informacion en la tabla otra vez
             readRecords();
 
             // Limpia los campos del formulario estudios realizados del popup
@@ -56,7 +56,6 @@ function addRecordEstudio() {
 }
 
 // Elimina un estudio realizado
-
 function DeleteEstudio(id) {
     $.post("ajax/estudios_artista/deleteEstudio.php", {
             id: id
@@ -86,6 +85,7 @@ function GetEstudioDetails(id) {
     $("#update_estudios_realizados").modal("show");
 }
 
+//Actualiza los datos
 function UpdateEstudioDetails() {
     var estudio = $("#update_estudio").val();
     var institucion = $("#update_institucion").val();
@@ -110,6 +110,8 @@ function UpdateEstudioDetails() {
 $(document).ready(function () {
     readRecords(); // llama la funcion al cargar la pagina
 });
+
+//Continua el mismo proceso...
 
 function addRecordTitulo() {
     var titulo = $("#titulo").val();

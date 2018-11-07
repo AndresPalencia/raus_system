@@ -2,15 +2,19 @@
 include("database/db_conection.php");
 include("includes/estados.php");
 include('session.php');
+
 $id_user=$_SESSION['id'];
 $select_ente="SELECT * FROM entes_culturales WHERE usuarios_id_usuario='$id_user'";
 $run_select=mysqli_query($dbcon,$select_ente) or die($select_ente);
 while($row_ente=mysqli_fetch_array($run_select)){
     $id_ente_select=$row_ente['id_ente_cultural'];
+    $nombre=$row_ente['nombre_ente'];
+    $pre_rif=$row_ente['pre_rif'];
+    $rif_ente=$row_ente['rif_ente'];
+    $ubicacion=$row_ente['ubicacion_ente'];
+    $razon_social=$row_ente['razon_social'];
 }
-while($row_artista=mysqli_fetch_array($run_select)){
-    $id_artista=$row_artista['id_artistas'];
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,25 +74,38 @@ include("header_suscripcion.php");
             <br>
             <br>
             <div class="section-header">
-                <h3>Suscripci&oacute;n</h3>
-            </div>
+                 <h3>
+                    <?php if ($_SESSION['licencia'] == 0){
+                        echo "Suscripci&oacute;n";
+                    }else{
+                        echo "Usuario ".$_SESSION['numero_unico_registro'];
+                    } 
+                    ?>
+                </h3>
+            </div><div class="required">* Todos los campos son obligatorios</div>
             <form action="functions/suscribir_ente.php" id="suscripcion" name="suscripcion" method="post" role="form" >
                 <br>
                 <br>
                 <div class="form-row">
                     <input type="text" hidden value="<?php echo $user; ?>" name="user_ente" class="form-control" id="user_ente" placeholder="Nombre del ente"/>
                     <div class="form-group col-md-6">
-                        <input type="text" name="nombre_ente" class="form-control" id="nombre_ente" placeholder="Nombre del ente" required />
+                        <input type="text" name="nombre_ente" class="form-control" id="nombre_ente" value="<?php echo $nombre;?>" placeholder="Nombre del ente" required />
                     </div>
-                    <div class="form-group col-md-6">
-                        <input type="text" name="rif_ente" class="form-control" id="rif_ente" placeholder="RIF del ente" required />
+                    <div class="form-group col-md-1">
+                            <select name="pre_rif" class="form-control" id="pre_rif" value="<?php echo $pre_rif;?>">
+                                <option value="J">J</option>
+                                <option value="G">G</option>
+                            </select>
+                        </div>
+                    <div class="form-group col-md-5">
+                        <input type="text" name="rif_ente" class="form-control" id="rif_ente" value="<?php echo $rif_ente;?>"placeholder="RIF del ente" required />
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="ubicacion" id="ubicacion" rows="5" placeholder="Ubicaci&oacute;n"></textarea>
+                    <textarea class="form-control" name="ubicacion" id="ubicacion"  rows="5" placeholder="Ubicacion"><?php echo $ubicacion;?></textarea>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="razon" id="razon" rows="5" placeholder="Raz&oacute;n Social"></textarea>
+                    <textarea class="form-control" name="razon" id="razon" rows="5" placeholder="Razon Social"><?php echo $razon_social;?></textarea>
                 </div>
                 <div >
                     <div >
@@ -97,14 +114,21 @@ include("header_suscripcion.php");
                 </div>
                 <div class="redes_sociales_entes_content">
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <input type="checkbox" name="contrato" value="1" required> Aceptar
-                        <a href="" data-toggle="modal" data-target="#exampleModal">Contrato</a><br>
-                    </div>
-                </div>
+               
+                <?php if ($_SESSION['licencia'] == 0){
+                        echo '
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <input type="checkbox" name="contrato" value="1" required> Aceptar
+                                    <a href="" data-toggle="modal" data-target="#exampleModal">Contrato</a><br>
+                                </div>
+                            </div>';
+                    }
+                ?>
+
+
                 <div>
-                    <input class="text-center btn btn-lg btn-block" type="submit" value="Enviar" name="suscripcion" >
+                    <input class="text-center btn btn-lg btn-block" type="submit" value="Guardar" name="suscripcion" >
                 </div>
                 <?php
                 include("redes_sociales_entes.php");
