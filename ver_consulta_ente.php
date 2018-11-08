@@ -1,6 +1,7 @@
 <?php
 include("database/db_conection.php");
 include('session.php');
+include("tiempo_inactividad.php");
 
 $id_usuario = $_GET['id_ente'];
 

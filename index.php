@@ -2,6 +2,9 @@
 session_start();
 include("database/db_conection.php");
 include("includes/estados.php");
+include("tiempo_inactividad.php");
+
+
 ?>
 
 <!DOCTYPE html>

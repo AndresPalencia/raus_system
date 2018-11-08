@@ -2,6 +2,7 @@
 include("database/db_conection.php");
 include("includes/estados.php");
 include('session.php');
+include("tiempo_inactividad.php");
 
 $id_user=$_SESSION['id'];
 $select_ente="SELECT * FROM entes_culturales WHERE usuarios_id_usuario='$id_user'";

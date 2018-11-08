@@ -10,6 +10,7 @@ if(mysqli_num_rows($run))
 {
     session_start();
     $_SESSION['user']=$user_user;
+    $_SESSION['tiempo']=time();
 
     while($row=mysqli_fetch_array($run))  {
         if (password_verify($user_pass,$row['contrasena'])== true) {

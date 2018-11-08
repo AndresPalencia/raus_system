@@ -1,6 +1,7 @@
 <?php
 include("database/db_conection.php");
 include('session.php');
+include("tiempo_inactividad.php");
 
 $id_user=$_SESSION['id'];
 $select_artista="SELECT *FROM artistas_urbanos where usuarios_id_usuario='$id_user'";
