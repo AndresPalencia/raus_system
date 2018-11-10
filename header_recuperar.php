@@ -7,16 +7,12 @@
     <header id="header">
         <div class="container-fluid">
             <div id="logo" class="pull-left">
-                <h1><a href="#intro" class="scrollto">RAUS</a></h1>
+                <h1><a href="index.php" class="scrollto">RAUS</a></h1>
             </div>
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="#about">Con&oacute;cenos</a></li>
-                    <li><a href="#social">S&iacute;guenos</a></li>
-                    <?php if (!isset($_SESSION['user'])){
-                        echo '<li><a href="#contact">Registrate</a></li>';
-                        echo '<li><a href="recuperar_contrasenia.php">Seguridad</a></li>';
-                    }?>
+                    
+                   
                     <!-- <li class="menu-has-children"><a href="">Drop Down</a>
                        <ul>
                          <li><a href="#">Drop Down 1</a></li>

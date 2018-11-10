@@ -7,6 +7,22 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+}
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+
+
 body {
   background: #fff;
   color: #666666;

@@ -6,6 +6,8 @@ $user_lastname=$_POST['lastname'];
 $user_id_doc=$_POST['id_doc'];
 $user_pre_id=$_POST['pre_id_doc'];
 $user_pass=$_POST['pass'];
+$user_pregunta=$_POST['pregunta'];
+$user_respuesta=$_POST['respuesta'];
 $user_address=$_POST['address'];
 $user_phone=$_POST['phone'];
 $user_cod_area=$_POST['cod_tel'];
@@ -39,10 +41,10 @@ if(mysqli_num_rows($run_query_email)>0)
     exit();
 }
 
-if($_POST['name']!=='' && $user_lastname!=='' && $user_id_doc!=='' && $user_pass!=='' && $user_address!=='' && $user_phone!=='' && $user_email!=='' && $user_cbx_parroquia!=='' && $user_tipo!=='' && filter_var($user_email, FILTER_VALIDATE_EMAIL) ){
+if($_POST['name']!=='' && $user_lastname!=='' && $user_id_doc!=='' && $user_pass!=='' && $user_pregunta!=='' && $user_respuesta!=='' && $user_address!=='' && $user_phone!=='' && $user_email!=='' && $user_cbx_parroquia!=='' && $user_tipo!=='' && filter_var($user_email, FILTER_VALIDATE_EMAIL) ){
 
 
-    $insert_user="INSERT into usuarios (nombres,apellidos,doc_ident,contrasena,telefono,correo,direccion,parroquias_id_parroquia,tipo_usuario,codigo_area,pre_ci) VALUES ('$user_name','$user_lastname','$user_id_doc','$user_pass','$user_phone','$user_email','$user_address','$user_cbx_parroquia','$user_tipo','$user_cod_area','$user_pre_id')";
+    $insert_user="INSERT into usuarios (nombres,apellidos,doc_ident,contrasena,pregunta_seguridad, respuesta_seguridad, telefono,correo,direccion,parroquias_id_parroquia,tipo_usuario,codigo_area,pre_ci) VALUES ('$user_name','$user_lastname','$user_id_doc','$user_pass' ,'$user_pregunta','$user_respuesta','$user_phone','$user_email','$user_address','$user_cbx_parroquia','$user_tipo','$user_cod_area','$user_pre_id')";
 
     $resultado=mysqli_query($dbcon,$insert_user) or die ($insert_user); //$insert_user
     $user_id_insert=mysqli_insert_id($dbcon);

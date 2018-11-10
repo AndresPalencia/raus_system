@@ -120,7 +120,7 @@ include("header_suscripcion.php");
 
                     <table class="table">
                         <tr>
-                            <th>Red Social / Sitio Web</th>
+                            <th width="20%">Red Social / Sitio Web</th>
                             <th>URL</th>
                         </tr>
                     <?php  
@@ -149,7 +149,7 @@ include("header_suscripcion.php");
                    
                      <br>
                      <center>
-                         <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#solicitar_popup"> Crear Pauta</a>
+                         <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#solicitar_popup"> Crear Pauta</a>
                      </center>
                     <br>
 	            </div>

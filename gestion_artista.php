@@ -1,7 +1,7 @@
 <?php
 include("database/db_conection.php");
 include('session.php');
-include("tiempo_inactividad.php");
+//include("tiempo_inactividad.php");
 
 $id_user=$_SESSION['id'];
 $select_artista="SELECT *FROM artistas_urbanos where usuarios_id_usuario='$id_user'";
@@ -55,7 +55,10 @@ $run_gestion=mysqli_query($dbcon,$gestion);
     <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.css">
     <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
     <script src="js/alertify/alertify.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="js/timer.js"></script>
 </head>
 <body>
 <?php

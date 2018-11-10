@@ -59,6 +59,8 @@ $("#registro_btn").click(function(){
     pre_id_doc=$('#pre_id_doc').val();
     pass=$('#pass').val();
     repass = $("#repass").val();
+    pregunta=$('#pregunta').val();
+    respuesta = $("#respuesta").val();
     estado = $("#cbx_estado").val();
     municipio = $("#cbx_municipio").val();
     address=$('#address').val();
@@ -99,6 +101,8 @@ $("#registro_btn").click(function(){
             "&id_doc="+id_doc+
             "&pre_id_doc="+pre_id_doc+
             "&pass="+pass+
+            "&pregunta="+pregunta+
+            "&respuesta="+respuesta+
             "&address="+address+
             "&phone="+phone+
             "&cod_tel="+cod_tel+
@@ -149,6 +153,16 @@ $("#registro_btn").click(function(){
             if($.trim(pass) != "" && pass !=repass){
                 alertify.error('Las contraseñas no coinciden');
                 document.getElementById("repass").focus();
+                return false;
+            }
+            if($.trim(pregunta) == ""){
+                alertify.error('Ingrese una pregunta de seguridad');
+                document.getElementById("pregunta").focus();
+                return false;
+            }
+            if($.trim(respuesta) == ""){
+                alertify.error('Ingrese la respuesta a la pregunta de seguridad');
+                document.getElementById("repuesta").focus();
                 return false;
             }
             if($.trim(estado) == ""){

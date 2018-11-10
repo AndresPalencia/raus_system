@@ -53,6 +53,7 @@ while($row_ente=mysqli_fetch_array($run_select)){
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/validar_numericos.js"></script>
 </head>
 <body>
 
@@ -99,7 +100,7 @@ include("header_suscripcion.php");
                             </select>
                         </div>
                     <div class="form-group col-md-5">
-                        <input type="text" name="rif_ente" class="form-control" id="rif_ente" value="<?php echo $rif_ente;?>"placeholder="RIF del ente" required />
+                        <input type="text" name="rif_ente" class="form-control" id="rif_ente" value="<?php echo $rif_ente;?>"placeholder="RIF del ente" onkeypress="return validaNumericos(event)" />
                     </div>
                 </div>
                 <div class="form-group">

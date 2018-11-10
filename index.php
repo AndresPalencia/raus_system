@@ -2,7 +2,6 @@
 session_start();
 include("database/db_conection.php");
 include("includes/estados.php");
-include("tiempo_inactividad.php");
 
 
 ?>
@@ -44,6 +43,8 @@ include("tiempo_inactividad.php");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script src="js/timer.js"></script>
+    
      <script>
        function onSubmit(token) {
          document.getElementById("demo-form").submit();
@@ -237,6 +238,14 @@ include("header.php");
                         </div>
                     </div>
                     <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" name="pregunta" class="form-control" id="pregunta" placeholder="Pregunta de seguridad" required/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" name="respuesta" class="form-control" id="respuesta" placeholder="Respuesta de seguridad" required/>
+                        </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-4">
                             <select name="cbx_estado" class="form-control" id="cbx_estado" placeholder="Estado">
                                 <option value="">Seleccionar Estado</option>
@@ -280,11 +289,9 @@ include("header.php");
                     
                     <div>
                         <input 
-                            class="text-center btn btn-lg btn-block g-recaptcha" 
-                             
+                            class="text-center btn btn-lg btn-block"
                             data-sitekey="6LdJYXkUAAAAAN7nEXYw3OneFG_rZ3aaaDBaATX4" 
                             data-callback='onSubmit'
-                           
                             type="submit" 
                             id="registro_btn" 
                             value="Registrarse" name="registro" >

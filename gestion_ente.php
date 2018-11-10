@@ -66,6 +66,7 @@ $run_gestion=mysqli_query($dbcon,$gestion);
     <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
     <script src="js/alertify/alertify.js"></script>
     
+    
 </head>
 <body>
 <?php

@@ -268,7 +268,7 @@ include("header_suscripcion.php");
                     <br>
                      <br>
                      <center>
-                         <a  class="btn btn-success white" href="" data-toggle="modal" data-target="#solicitar_popup"> Crear Pauta</a>
+                         <a  class="btn btn-info white" href="" data-toggle="modal" data-target="#solicitar_popup"> Crear Pauta</a>
                      </center>
                     <br>
                     <?php 
