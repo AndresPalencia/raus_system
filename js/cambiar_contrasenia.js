@@ -71,7 +71,7 @@ $("#cambio_btn").click(function(){
             }
             if(html=='usuario_incorrecto')
             {
-                alertify.error("La CI o el numero de registro no es correcto");
+                alertify.error("La CI o el N° unico de registro no son correctos");
                 document.getElementById("user_cambio").focus();
                 exit();
             }
@@ -81,7 +81,7 @@ $("#cambio_btn").click(function(){
                 exit();
             }
             else if (html=='respuesta') {
-                alertify.error("Ingrese la respuesta de su pregunta de seguridad");
+                alertify.error("Ingrese la respuesta a su pregunta de seguridad");
                 document.getElementById("respuesta").focus();
                 exit();
             }
@@ -91,7 +91,7 @@ $("#cambio_btn").click(function(){
                 exit();
             }else if(html=='done')
             {
-                alertify.success("Contraseña cambiada exitosamente.");
+                alertify.success("Contraseña Cambiada Exitosamente.");
                 window.open('index.php','_self');
             }
             if($.trim(pregunta) == ""){

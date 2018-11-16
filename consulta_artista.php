@@ -1,7 +1,6 @@
 <?php
 include("database/db_conection.php");
 include('session.php');
-include("tiempo_inactividad.php");
 
 $id_user=$_SESSION['id'];
 
@@ -50,6 +49,7 @@ $run_gestion=mysqli_query($dbcon,$gestion);
     <link rel="stylesheet" type="text/css" href="js/alertify/css/alertify.css">
     <link rel="stylesheet" type="text/css" href="js/alertify/css/themes/bootstrap.css">
     <script src="js/alertify/alertify.js"></script>
+     <script src="js/timer.js"></script>
     
 </head>
 <body>

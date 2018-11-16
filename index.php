@@ -81,6 +81,9 @@ include("header.php");
                 <div class="carousel-item">
                     <div class="carousel-background"><img src="img/intro-carousel/4.jpg" alt=""></div>
                 </div>
+                <div class="carousel-item">
+                    <div class="carousel-background"><img src="img/intro-carousel/5.jpg" alt=""></div>
+                </div>
             </div>
             <div class="carousel-container">
                 <div class="carousel-content col-md-6">
@@ -167,15 +170,22 @@ include("header.php");
             <header class="section-header">
                 <h3 class="section-title">Siguenos</h3>
             </header>
-            <br>
-            <div class="container">
+            <br><br><br>
+            <div class="container" align="center">
                 <div class="row">
                     <div class="col-md-6 twitter-content" >
-                        <a class="twitter-timeline" data-lang="es" data-height="850" data-link-color="#00c5cd" href="https://twitter.com/rausystem">Tweets by Raus</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a class="twitter-timeline" data-lang="es" data-width="425" data-height="550" data-link-color="#00c5cd" href="https://twitter.com/rausystem">Tweets by Raus</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2';
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
                     <div class="col-md-6">
-                        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                        <div class="elfsight-app-5e3f40e1-f90b-4ff1-ae0b-9d2bacd7e7e8"></div>
+                        <div class="fb-page" data-href="https://www.facebook.com/rausystem/" data-tabs="timeline" data-width="400" data-height="550" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/rausystem/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/rausystem/">Rausystem</a></blockquote></div>
                     </div>
                 </div>
             </div>

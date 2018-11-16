@@ -4,7 +4,7 @@
 <footer id="footer">
     <div class="container">
         <div class="copyright">
-            &copy; Copyright 2018 <strong>RAUS</strong>. Todos los derechos reservados
+            RAUSystem 2018 <strong>RAUS</strong>. CC0 Licencia (Creative Commons) 
         </div>
     </div>
 </footer>

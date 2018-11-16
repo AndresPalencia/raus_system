@@ -38,6 +38,7 @@ a:hover, a:active, a:focus {
   
   outline: none;
   text-decoration: none;
+  color: #666666;
 }
 
 p {
